@@ -1,0 +1,87 @@
+:root{
+    --colour-primary: #394149;
+    --colour-secondary: white;
+    --colour-accent: #D25913;
+    --font-primary: 'Raleway', sans-serif;
+    --text-base-size: 1rem;
+
+    --text-scale-ratio: 1.2;
+    --text-xxl: 4rem;
+    --text-xl: 3rem;
+    --text-lg: 2rem;
+    --text-md: 1.4rem;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-size: var(--text-base-size);
+    font-family: var(--font-primary);
+    color: var(--colour-primary);
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+nav{
+    margin-top: 1em;
+    font-size: var(--text-md);
+}
+
+h1{
+    font-size: var(--text-xxl);
+    font-weight: 700;
+}
+
+h2{
+    font-size: var(--text-xl);
+}
+
+h3{
+    font-size: var(--text-lg);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo{
+    width: 10rem;
+}
+
+.btn{
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-primary{
+    background-color: var(--colour-primary);
+    border: 2px solid var(--colour-primary);
+    color: var(--colour-secondary);
+    
+}
+
+.btn-secondary{
+    background-color: var(--colour-secondary);
+    border: 2px solid var(--colour-primary);
+    color: var(--colour-primary);
+}
+
+.btn-primary--accent{
+    background-color: var(--colour-accent);
+    border-color: var(--colour-accent);
+}
+
+
+.feature__image{
+    width:15em;
+}
+
+

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap" /> 	
+    <title>Vite App</title>
+  </head>
+  <nav>
+    
+    <div class="nav_content">
+      <a href="index.html"><img class="logo-icon" alt="" src="logo.png"></a>
+      <input type="search" name="searchbox" id="searchbox" class="searchbox"> 
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" class="check"> 
+      <ul>
+        <li><a href="../recipe/index.html">ALL RECIPE</a></li>
+        <li><a href="#">SUBSCRIPTION</a></li>
+        <li class="Cart">
+          <a href="../cart/index.html">
+            <img src="Icon.svg" alt="Cart"><span>0</span>
+           </a>
+        </li>
+        <li><a href="../login.html"><img src="login.svg" alt="Login" class="Login"></a></li>
+      </ul>
+    </div>
+    
+  </nav>
+
+  <section class="product-container">
+    <div class="cart">
+      <table>
+          <tr>
+              <td>
+                  <img src="fish_chips.svg" alt="Fish & Chips">
+                  <span>Fish & Chips</span>
+                  <br><small>1 person (2 meals)</small>
+              </td>
+              <td>
+                  <div class="item">
+                    <button type="button" class="add" id="add">
+                      <img src="add.svg" alt="">
+                    </button>
+                    <span>0</span>
+                    <button type="button" class="minus" id="minus">
+                      <img src="minus.svg" alt="">
+                    </button>
+                  </div>
+              </td>
+              <td>$30</td>
+          </tr>
+          <tr>
+              <td>
+                  <img src="green_salad.svg" alt="Fish & Chips">
+                  <span>Green Salad</span>
+                  <br><small>1 person (2 meals)</small>
+              </td>
+              <td>
+                  <div class="item">
+                    <button type="button" class="add" id="add">
+                      <img src="add.svg" alt="">
+                    </button>
+                    <span>0</span>
+                    <button type="button" class="minus" id="minus">
+                      <img src="minus.svg" alt="">
+                    </button>
+                  </div>
+              </td>
+              <td>$30</td>
+          </tr>
+          <tr>
+              <td>
+                  <img src="beef_kabab.svg" alt="Fish & Chips">
+                  <span>Beef Kabab</span>
+                  <br><small>1 person (2 meals)</small>
+              </td>
+              <td>
+                  <div class="item">
+                    <button type="button" class="add" id="add">
+                      <img src="add.svg" alt="">
+                    </button>
+                    <span>0</span>
+                    <button type="button" class="minus" id="minus">
+                      <img src="minus.svg" alt="">
+                    </button>
+                  </div>
+              </td>
+              <td>$30</td>
+          </tr>
+      </table>
+    </div>
+
+    <div class="summary-section">
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <p class="subtotal">Recipe (  <span class="item_count">0</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<span class="price">      0</span></p>
+        <p class="delivery">Free Delivery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<span class="price">      0</span></p>
+        <hr>
+        <p class="total">Total<span class="symbol">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$</span><span class="price">      0</span></p>
+        <div class="date-time">
+          <div onclick="showDatePicker()">
+              <img src="calendar_icon.png" alt="Calendar">
+              <span id="selected-date">choose date and time</span>
+          </div>
+          <div class="dropdown">
+            <img src="clock.svg" alt="Clock">
+            <select name="time" id="time-options" class="time-options">6:00~8:00
+              <option>8:00~10:00</option>
+              <option>10:00~12:00</option>
+              <option>12:00~14:00</option>
+              <option>14:00~16:00</option>
+            </select>    
+          </div>
+        </div>
+      <div class="button">
+        <button class="checkout"></button>
+        <button class="add-to-plan"></button>
+      </div>
+      
+      
+
+  </section>
+
+  <script type="module" src="/main.js"></script>
+  </body>
+</html>
