@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="payment.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <nav>
+    
+      <div class="nav_content">
+        <a href="index.html"><img class="logo-icon" alt="" src="logo.png"></a>
+        <input type="search" name="searchbox" id="searchbox" class="searchbox"> 
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" class="check"> 
+        <ul>
+          <li><a href="recipe.html">ALL RECIPE</a></li>
+          <li><a href="subscription.html">SUBSCRIPTION</a></li>
+          <li class="Cart">
+            <a href="cart.html">
+              <img src="Icon.svg" alt="Cart"><span>0</span>
+             </a>
+          </li>
+          <li><a href="login.html"><img src="login.svg" alt="Login" class="Login"></a></li>
+        </ul>
+      </div>
+      
+    </nav>
+    
+    <header>
+      <div class="breadcrumb">
+        <a href="#">account</a> &gt; <a href="#" class="delivery1">delivery</a> &gt; <a href="#">payment</a>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="sunburst"></div>
+      <div class="main-content">
+        <div class="form-section">
+          <form>
+            <div class="form-group">
+              <label for="credit-card-number">Credit card number</label>
+              <input class="input" type="text" id="credit-card-number" name="credit-card-number">
+            </div>
+            <div class="form-group2">
+              <div class="half-width">
+                <label for="expiry-date">Expired date</label>
+                <input class="input1" type="text" id="expiry-date" name="expiry-date">
+              </div>
+              <div class="half-width">
+                <label for="security-code">Security code</label>
+                <input class="input1" type="text" id="security-code" name="security-code">
+              </div>
+            </div>
+            <div class="form-group">
+              <label  for="name-on-card">Name on the card</label>
+              <input class="input" type="text" id="name-on-card" name="name-on-card">
+            </div>
+
+            <fieldset class="billing-address">
+              <legend>Billing Address</legend>
+                <div class="forms">
+                  <div class="form-group">
+                    <label for="country">Country/region</label>
+                    <input class="input" type="text" id="country" name="country">
+                  </div>
+
+                  <div class="form-group2">
+                    <div class="form-group3">
+                      <label for="firstname">First name</label>
+                      <input class="input1" type="text" id="firstname" name="firstname">
+                    </div>
+                    <div class="form-group3">
+                      <label for="lastname">Last name</label>
+                      <input class="input1" type="text" id="lastname" name="lastname">
+                    </div>
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="input" type="email" id="email" name="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="company">Company (Optional)</label>
+                    <input class="input" type="text" id="company" name="company">
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input class="input" type="text" id="address" name="address">
+                  </div>
+                  <div class="form-group1">
+                    <div class="form-group">
+                      <label class="site" for="city">City</label>
+                      <input class="input2" class="site" type="text" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                      <label class="site" for="state">State</label>
+                      <input class="input2" class="site" type="text" id="state" name="state">
+                    </div>
+                    <div class="form-group">
+                      <label class="site" for="postcode">Postcode</label>
+                      <input class="input2" class="site" type="text" id="postcode" name="postcode">
+                    </div>
+
+                  </div>
+                  <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input class="input" type="text" id="mobile" name="mobile">
+                  </div>
+                </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <div class="summary-section">
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <p class="subtotal">Recipe (  <span class="item_count">0</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<span class="price">      0</span></p>
+          <p class="delivery">Free Delivery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<span class="price">      0</span></p>
+          <hr>
+          <p class="total">Total<span class="symbol">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$</span><span class="price">      0</span></p>
+          <a href="#" class="next-button"></a>
+        </div>
+
+      </div>
+    </section>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
