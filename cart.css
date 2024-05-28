@@ -210,6 +210,7 @@ button.add-to-plan{
 
 }
 
+
 .total{
   font-weight: 700;
   font-size: 48px;
@@ -278,10 +279,19 @@ h2{
 
 
 span.price{
+  display: flex;
   font-size: 32px;
-  justify-content: flex-end;
+  align-content: flex-end !important;
   position: relative;
+  flex-wrap: wrap;
 
+}
+
+p{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
 }
 
 .item{

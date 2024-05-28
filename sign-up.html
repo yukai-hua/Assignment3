@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="subscription.css">
+    <link rel="stylesheet" href="sign-up.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,6 @@
     
       <div class="nav_content">
         <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
-        <input type="search" name="searchbox" id="searchbox" class="searchbox"> 
         <label for="check" class="checkbox">
           <i class="ri-menu-line"></i>
         </label>
@@ -36,14 +35,32 @@
     </nav>
 
     <section>
-      <img class="reminder" src="images/reminder.svg" alt="">
-      <div class="next_btn">
-        <h1>next</h1>
-        <a href="declearation.html" class="next"></a>
-      </div>
-      <img src="images/decoration.svg" alt="">
+        <div class="login-container">
+            <div class="login-section">
+                <div class="title">
+                    <h1>Create Account</h1>
+                </div>
+                <div class="email">
+                    <h3>email</h3>
+                    <input type="text" name="email" id="email" placeholder="email" required>
+                </div>
+                <div class="password">
+                    <h3>password</h3>
+                    <input type="password" placeholder="password" required>
+                </div>
+                <div class="confirmation">
+                    <h3>confirm password</h3>
+                    <input type="password" placeholder="confirm password" required>
+                </div>
+
+            </div>
+            <form action="index.html" class="login-btn">
+                <button class="login">Login</button>
+            </form>
+
+        </div>
     </section>
 
-    <script type="module" src="main.js"></script>
-  </body>
+    <script src="main.js"></script>
+</body>
 </html>

@@ -117,8 +117,8 @@ ul li a:hover{
 
 .bubble_button{
     position: relative;
-    bottom: 225px;
-    left: 10.5%;
+    top: 120px;
+    right: 83%;
 }
 
 .why-choose-us-child {
@@ -265,13 +265,14 @@ footer{
 }
 
 .sectionContainer{
-    max-width: var(--max-width);
+    display: flex;
+    max-width: 1400px;
     margin: auto;
     padding: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    
+    justify-content: space-between;
+    align-items: center; 
 }
+
 
 
 

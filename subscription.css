@@ -30,6 +30,20 @@ nav input.check{
   
 }
 
+.Cart span{
+  display: flex;
+  text-align: center;
+  position: relative;
+  bottom: 18px;
+  left: -5px;
+  width: 20px;
+  height: 20px;
+  background-image: url(images/circle.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 
 nav{
@@ -77,9 +91,10 @@ ul{
 }
 
 ul li a{
+  display: flex;
   color: #000;
   font-family: Kavoon;
-  
+  justify-content: center;
 }
 
 ul li a:hover{

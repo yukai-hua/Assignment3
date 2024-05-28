@@ -106,8 +106,11 @@ ul li a{
   
 }
 
-
-
+ul li a:hover{
+  border-top-color:var(--primary-color) ;
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+}
 
 
 
@@ -211,7 +214,7 @@ section{
   width:100%;
   min-height: 339px;
   align-content: center;
-  background-image: url(images/recipe\ pattern.png); 
+  background-image: url("images/recipe\ pattern.png"); 
   background-size:cover;
   background-repeat:no-repeat;
   background-position: top;
