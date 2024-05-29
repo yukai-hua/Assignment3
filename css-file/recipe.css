@@ -35,7 +35,7 @@ nav{
   top: 0;
   left: 0;
   z-index: 99;
-  background-image:url(images/ivory-off-white-paper-texture.jpg);
+  background-image:url(../images/ivory-off-white-paper-texture.jpg);
 }
 
 
@@ -76,7 +76,7 @@ nav.logo-icon a:hover{
   position: relative;
   bottom: 38px;
   left: 20px;
-  background-image: url(images/circle.svg);
+  background-image: url(../images/circle.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -114,11 +114,16 @@ ul li a:hover{
 
 
 
+.cart-text,.log-text{
+  display: none;
+  }
+    
+    
 @media (width < 750px) {
   nav .searchbox{
-      display: block;
-  
-      
+    display: block;
+
+    
   }
 
   .checkbox{
@@ -132,25 +137,51 @@ ul li a:hover{
 
 
   ul{
-      position: absolute;
-      width: 178px;
-      height: 300% !important;
-      left: -110%;
-      top: 26.5vh;
-      flex-direction: column;
-      justify-content: center;
-      gap: 3rem;
-      margin:0%;
-      padding-left: 0%;
-      background-color: #000;
+    position: absolute;
+    width: 178px;
+    height: 300% !important;
+    left: -110%;
+    top: 26.5vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    margin:0%;
+    padding-left: 0%;
+    background-color: #000;
   }
 
   ul li a{
-    color: #fff;
+      color: #fff !important;
   }
-  
+
+  ul li a:hover{
+    color: var(--primary-color) !important;
+  }
+
   nav #check:checked ~ ul{
     left: 0;
+  }
+
+  ul li img{
+    display: none;
+  }
+
+  .cart-text,.log-text{
+    display: flex;
+    font-family: Kavoon;
+    color: #fff;
+  }
+
+  .log-text:hover{
+    color: var(--primary-color);
+  }
+
+  .cart-text:hover{
+    color: var(--primary-color);
+  }
+
+  .Cart span{
+    display:none !important;
   }
 
 }
@@ -159,7 +190,7 @@ ul li a:hover{
 body {
   width: 100%;
   height: 100%;
-  background-image:url(images/ivory-off-white-paper-texture.svg);
+  background-image:url(../images/ivory-off-white-paper-texture.svg);
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
@@ -172,7 +203,7 @@ body {
   position: relative;
   bottom: 38px;
   left: 20px;
-  background-image: url(images/circle.svg);
+  background-image: url(../images/circle.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -190,7 +221,7 @@ ul li a{
 
 section{
   position: relative;
-  background-image: url(images/ivory-off-white-paper-texture.jpg);
+  background-image: url(../images/ivory-off-white-paper-texture.jpg);
   width: auto;
   justify-content: center;
   align-items: center;
@@ -201,7 +232,7 @@ section{
   position: relative;
   width: 100%;
   top: 27vh; 
-  background-image: url(images/ivory-off-white-paper-texture.jpg);
+  background-image: url(../images/ivory-off-white-paper-texture.jpg);
   justify-content: center;
   align-items: center;
   background-size:cover;
@@ -214,7 +245,7 @@ section{
   width:100%;
   min-height: 339px;
   align-content: center;
-  background-image: url("images/recipe\ pattern.png"); 
+  background-image: url(../images/recipe\ pattern.png); 
   background-size:cover;
   background-repeat:no-repeat;
   background-position: top;
@@ -271,7 +302,7 @@ section{
 }
 
 .serving{
-  background-image: url(images/serving__hat.svg);
+  background-image: url(../images/serving__hat.svg);
   width: 100%;
   
 }
@@ -301,19 +332,19 @@ option{
 .fish_chips{
   width: 353px;
   height: 366px;
-  background-image:url(images/F&C.svg) ;
+  background-image:url(../images/F&C.svg) ;
 }
 
 .Green_salad{
   width: 353px;
   height: 366px;
-  background-image:url(images/G&S.svg) ;
+  background-image:url(../images/G&S.svg) ;
 }
 
 .Beef_Kabab{
   width: 353px;
   height: 366px;
-  background-image:url(images/B&K.svg) ;
+  background-image:url(../images/B&K.svg) ;
 
 }
 
@@ -321,7 +352,7 @@ option{
   position: relative;
   width: 95px;
   height: 26px;
-  background-image: url(images/add-to-cart.svg);
+  background-image: url(../images/add-to-cart.svg);
   top: -170px;
   left: 125px;
   background-position: center;
@@ -329,7 +360,7 @@ option{
 }
 
 .item:hover{
-  background-image: url(images/addtocart-hover.svg);
+  background-image: url(../images/addtocart-hover.svg);
 }
 
 .item button.add{

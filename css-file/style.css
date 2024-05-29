@@ -35,7 +35,7 @@ nav{
     top: 0;
     left: 0;
     z-index: 99;
-    background-image:url(images/ivory-off-white-paper-texture.svg);
+    background-image:url(../images/ivory-off-white-paper-texture.svg);
 }
 
 
@@ -76,7 +76,7 @@ nav.logo-icon a:hover{
     position: relative;
     bottom: 38px;
     left: 20px;
-    background-image: url(images/circle.svg);
+    background-image: url(../images/circle.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -112,7 +112,10 @@ ul li a:hover{
     color: var(--primary-color);
 }
 
-
+.cart-text,.log-text{
+    display: none;
+  }
+  
 
 
 .bubble_button{
@@ -260,7 +263,7 @@ footer{
     position: relative;
     width: 100%;
     top: 27vh; 
-    background-image: url(images/ivory-off-white-paper-texture.jpg);  
+    background-image: url(../images/ivory-off-white-paper-texture.jpg);  
 
 }
 
@@ -275,53 +278,79 @@ footer{
 
 
 
-
+.cart-text,.log-text{
+    display: none;
+    }
+      
+      
 @media (width < 750px) {
-    nav .searchbox{
-        display: block;
-    
-        
-    }
-  
-    .checkbox{
-      display: block;
-    }
-  
-    .nav_content>*{
-      margin-left: 0;
-    }
-  
-  
-  
-    ul{
-        position: absolute;
-        width: 178px;
-        height: 300% !important;
-        left: -110%;
-        top: 26.5vh;
-        flex-direction: column;
-        justify-content: center;
-        gap: 3rem;
-        margin:0%;
-        padding-left: 0%;
-        background-color: #000;
-    }
-  
-    ul li a{
-      color: #fff;
-    }
+nav .searchbox{
+    display: block;
 
     
-    nav #check:checked ~ ul{
-      left: 0;
-    }
-  
+}
+
+.checkbox{
+    display: block;
+}
+
+.nav_content>*{
+    margin-left: 0;
+}
+
+
+
+ul{
+    position: absolute;
+    width: 178px;
+    height: 300% !important;
+    left: -110%;
+    top: 26.5vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    margin:0%;
+    padding-left: 0%;
+    background-color: #000;
+}
+
+ul li a{
+    color: #fff;
+}
+
+
+nav #check:checked ~ ul{
+    left: 0;
+}
+
+ul li img{
+    display: none;
+}
+
+.cart-text,.log-text{
+    display: flex;
+    font-family: Kavoon;
+    color: #fff;
+}
+
+.log-text:hover{
+    color: var(--primary-color);
+}
+
+.cart-text:hover{
+    color: var(--primary-color);
+}
+
+.Cart span{
+    display:none;
+}
+
 }
 
 body{
     width: 100%;
     height: 100%;
-    background-image:url(images/ivory-off-white-paper-texture.svg);
+    background-image:url(../images/ivory-off-white-paper-texture.svg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;

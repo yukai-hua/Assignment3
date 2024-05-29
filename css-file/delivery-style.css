@@ -10,6 +10,21 @@ html{
   height: 100%;
 }
 
+.checkbox{
+  display: none;
+}
+
+.check{
+  display: none;
+}
+
+.checkbox i{
+  font-size: 2rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+
 .nav_content > *{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -19,13 +34,30 @@ a{
   text-decoration: none;
 }
 
+.Cart span{
+  display: flex;
+  text-align: center;
+  position: relative;
+  bottom: 38px;
+  left: 20px;
+  background-image: url(../images/circle.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Cart img{
+  position: relative;
+  top: 10px;
+}
+
 nav{
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
-  background-image:url(images/ivory-off-white-paper-texture.svg);
+  background-image:url(../images/ivory-off-white-paper-texture.svg);
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
@@ -76,7 +108,7 @@ footer{
   position: relative;
   width: 100%;
   top: 27vh; 
-  background-image: url(images/ivory-off-white-paper-texture.jpg);  
+  background-image: url(../images/ivory-off-white-paper-texture.jpg);  
 
 }
 
@@ -100,7 +132,7 @@ section{
   left: 180px;
   width: 478px;
   height: 627.15px;
-  background-image: url(images/sunburst.svg);
+  background-image: url(../images/sunburst.svg);
   background-repeat: repeat-y;
 }
 
@@ -123,7 +155,7 @@ section{
 .input{
   height: 36px;
   min-width: 539px;
-  background-image: url(images/blank.svg);
+  background-image: url(../images/blank.svg);
   border: none;
   background-color: transparent;
 }
@@ -131,7 +163,7 @@ section{
 .input1{
   height: 36px;
   min-width: 256px;
-  background-image: url(images/blank1.svg);
+  background-image: url(../images/blank1.svg);
   border: none;
   background-color: transparent;
 }
@@ -139,7 +171,7 @@ section{
 .input2{
   height: 36px;
   min-width: 148px;
-  background-image: url(images/blank2.svg);
+  background-image: url(../images/blank2.svg);
   border: none;
   background-color: transparent;
 }
@@ -176,12 +208,12 @@ form{
 }
 
 
-.summary-section{
+.order-summary-section{
   position: relative;
   display: flex;
   justify-content: flex-start;
   min-width:555px;
-  background-image: url(images/hhhhhhh.svg);
+  background-image: url(../images/hhhhhhh.svg);
   height: 612px;
   top: 30vh;
 }
@@ -191,7 +223,7 @@ header{
   top: 31vh;
   height: 150px;
   min-width: 935px;
-  background-image: url(images/decoration.svg);
+  background-image: url(../images/checkout-deco.svg);
   background-size:cover;
   background-position: right;
 }
@@ -215,55 +247,225 @@ header{
   font-weight: 700;
 }
 
+button.checkout{
+  width: 100%;
+  height: 10.253%;
+  border:none;
+  background-color: transparent;
+  background-image: url(../images/Checkout.svg);
+}
+
+button.add-to-plan{
+  background-image: url(../images/add-to-plan.svg);
+}
+
+
+.summary-section{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  min-width:555px;
+  height: 612px;
+  background-image: url(../images/hhhhhhh.svg);
+
+}
+
+
+
 .order-summary{
   position: relative;
+  justify-content: space-between;
+  align-items: center;
   left: 46px;
-  top: 60px;
+  top: 0px;
+  right: 65vh;
+  width: 454px;
+  
+
 }
+
 
 .total{
   font-weight: 700;
   font-size: 48px;
+  margin-bottom: 0px; ;
 }
 
 .subtotal, .delivery{
   font-size: 32px;
 }
 
+
+
 h2{
   font-family: Kavoon;
   font-size: 32px;
 }
 
+
+span.price{
+  display: flex;
+  font-size: 32px;
+  align-content: flex-end !important;
+  position: relative;
+  flex-wrap: wrap;
+
+}
+
+p{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+
+
+span.Quantity{
+  position: relative;
+  left: 20px !important;
+  bottom: 1px !important;
+}
+
+.the-price{
+ display: flex;
+ justify-content: flex-end;
+ font-size: 20px;
+}
+
+.item span{
+  font-family: Karma SemiBold;
+  color: #000;
+  font-size: 20px;
+}
+
+.date-time{
+  display: flex;
+  gap: 2.2%;
+  position: relative;
+  bottom: 20px;
+  left: 90px;
+}
+
+.date-time span{
+  position: relative;
+  font-size: 10px;
+  font-weight: 700;
+  bottom: 10px;
+}
+
+.date-time>*{
+  width: 142px;
+  background-image: url(../images/date-time-backgr.svg);
+  
+}
+
+.dropdown select{
+  border: 0;
+  background-color: transparent;
+}
+
+.button-section{
+  display: flex;
+  height:63px;
+  width: 100%;
+  gap: 10%;
+}
+
+form,.add-to-plan{
+  width: 44.2%;
+  background: none;
+  border: none;
+}
+
+form{
+  border:none;
+  background-color: transparent;
+}
+
 .next-button{
   display: flex;
-  background-image: url(images/next_btn.svg);
+  background-image: url(../images/next_btn.svg);
   width: 201px;
   height: 62.75px;
   position: relative;
   left: 100.5px;
 }
+
+.cart-text,.log-text{
+  display: none;
+}
+
+
 @media (width < 750px) {
-  nav .searchbox{
-      display: block;
+
+  .checkbox{
+    display: block;
   }
+
+  .checkbox i{
+    display: block !important;
+
+  }
+
+
+  .nav_content>*{
+    margin-left: 0;
+  }
+
+
 
   ul{
       position: absolute;
-      width: 100%;
-      height: calc(100vh - 85px);
-      left: -100%;
-      top: 85px;
-      flex-direction: row;
+      width: 178px;
+      height: 300% !important;
+      left: -110%;
+      top: 26.5vh;
+      flex-direction: column;
       justify-content: center;
       gap: 3rem;
+      margin:0%;
+      padding-left: 0%;
+      background-color: #000;
   }
 
+  ul li a{
+    color: #fff;
+  }
+
+  
+  nav #check:checked ~ ul{
+    left: 0;
+  }
+
+  ul li img{
+      display: none;
+  }
+  
+  .cart-text,.log-text{
+      display: flex;
+      font-family: Kavoon;
+      color: #fff;
+  }
+
+  .log-text:hover{
+    color: var(--primary-color);
 }
+
+.cart-text:hover{
+    color: var(--primary-color);
+}
+  
+  .Cart span{
+      display:none;
+  }
+  
+}
+
 body{
   width: 100%;
   height: 100%;
-  background-image:url(images/ivory-off-white-paper-texture.svg);
+  background-image:url(../images/ivory-off-white-paper-texture.svg);
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;

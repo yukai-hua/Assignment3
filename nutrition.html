@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css-file/cart.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
+    <link rel="stylesheet"  href="css-file/nutrition.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap" /> 	
-    <title>Vite App</title>
-  </head>
+</head>
+<body>
+
   <nav>
     
     <div class="nav_content">
@@ -37,15 +39,37 @@
     </div>
     
   </nav>
-
+   
   <section>
-    <div class="product-container"></div>
-      
-    <div class="summary-section"></div>  
+    <div class="nutrition-card">
+        <div class="nutr-section">
+            <img class="frame" src="images/Rectangle-nutrition.svg" alt="">
+            <div class="title">
+                <h2>nutrition</h2>
+                <span class="back-to-page">
+                    <a href="product.html"></a>
+                </span>
+            </div>
+
+            <div class="circle-chart">
+                <img class="pie-chart"  src="images/pie-chart.svg" alt="">
+            </div>
+
+            <div class="info">
+              <h3>per 100g</h3>
+              <p>Calories: 3000KJ</p>
+              <div class="unhealthy-indicator">
+                <div class="square"></div>
+                <span>unhealthy</span>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
   </section>
-  
-  
 
   <script src="main.js"></script>
-  </body>
+
+</body>
 </html>

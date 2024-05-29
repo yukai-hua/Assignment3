@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="delivery-style.css" />
+    <link rel="stylesheet" href="css-file/delivery-style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Vite App</title>
   </head>
@@ -15,7 +17,6 @@
     
       <div class="nav_content">
         <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
-        <input type="search" name="searchbox" id="searchbox" class="searchbox"> 
         <label for="check" class="checkbox">
           <i class="ri-menu-line"></i>
         </label>
@@ -26,9 +27,15 @@
           <li class="Cart">
             <a href="cart.html">
               <img src="images/Icon.svg" alt="Cart"><span>0</span>
+              <div class="cart-text">CART</div>
              </a>
           </li>
-          <li><a href="login.html"><img src="images/login.svg" alt="Login" class="Login"></a></li>
+          <li>
+            <a href="login.html">
+             <img src="images/login.svg" alt="Login" class="Login">
+             <div class="log-text">LOGIN</div>
+            </a>
+          </li>
         </ul>
       </div>
       
@@ -95,20 +102,20 @@
         </div>
       </div>
 
-      <div class="summary-section">
+      <div class="order-summary-section">
         <div class="order-summary">
           <h2>Order Summary</h2>
           <p class="subtotal">Recipe (  <span class="item_count">0</span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<span class="price">      0</span></p>
           <p class="delivery">Free Delivery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<span class="price">      0</span></p>
           <hr>
           <p class="total">Total<span class="symbol">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$</span><span class="price">      0</span></p>
-          <a href="#" class="next-button"></a>
+          <a href="payment.html" class="next-button"></a>
         </div>
 
       </div>
     </section>
 
       
-    <script type="module" src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

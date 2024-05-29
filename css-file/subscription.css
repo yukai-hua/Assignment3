@@ -103,6 +103,10 @@ ul li a:hover{
   color: var(--primary-color);
 }
 
+.cart-text,.log-text{
+  display: none;
+}
+
 
 @media (width < 750px) {
   nav .searchbox{
@@ -124,9 +128,9 @@ ul li a:hover{
   ul{
       position: absolute;
       width: 178px;
-      height: 400% !important;
+      height: 300% !important;
       left: -110%;
-      top: 19.5vh;
+      top: 26.5vh;
       flex-direction: column;
       justify-content: center;
       gap: 3rem;
@@ -138,11 +142,33 @@ ul li a:hover{
   ul li a{
     color: #fff;
   }
+
   
   nav #check:checked ~ ul{
     left: 0;
   }
 
+  ul li img{
+      display: none;
+  }
+  
+  .cart-text,.log-text{
+      display: flex;
+      font-family: Kavoon;
+      color: #fff;
+  }
+  
+  .Cart span{
+      display:none;
+  }
+  
+  .log-text:hover{
+    color: var(--primary-color);
+}
+
+.cart-text:hover{
+    color: var(--primary-color);
+}
 }
 
 body {

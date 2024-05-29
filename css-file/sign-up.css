@@ -38,7 +38,7 @@ bottom: 18px;
 left: -5px;
 width: 20px;
 height: 20px;
-background-image: url(images/circle.svg);
+background-image: url(../images/circle.svg);
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -52,7 +52,7 @@ position: fixed;
 top: 0;
 left: 0;
 z-index: 99;
-background-image:url(images/ivory-off-white-paper-texture.svg);
+background-image:url(../images/ivory-off-white-paper-texture.svg);
 }
 
 
@@ -104,6 +104,11 @@ color: var(--primary-color);
 }
 
 
+.cart-text,.log-text{
+display: none;
+}
+  
+  
 @media (width < 750px) {
 nav .searchbox{
     display: block;
@@ -124,9 +129,9 @@ nav .searchbox{
 ul{
     position: absolute;
     width: 178px;
-    height: 400% !important;
+    height: 300% !important;
     left: -110%;
-    top: 19.5vh;
+    top: 26.5vh;
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
@@ -139,8 +144,31 @@ ul li a{
     color: #fff;
 }
 
+
 nav #check:checked ~ ul{
     left: 0;
+}
+
+ul li img{
+    display: none;
+}
+
+.cart-text,.log-text{
+    display: flex;
+    font-family: Kavoon;
+    color: #fff;
+}
+
+.log-text:hover{
+    color: var(--primary-color);
+}
+
+.cart-text:hover{
+    color: var(--primary-color);
+}
+
+.Cart span{
+    display:none;
 }
 
 }
@@ -148,7 +176,7 @@ nav #check:checked ~ ul{
 body {
     width: 100%;
     height: 100%;
-    background-image:url(images/ivory-off-white-paper-texture.svg);
+    background-image:url(../images/ivory-off-white-paper-texture.svg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -210,33 +238,6 @@ input::placeholder{
 
 
 
-
-.forgt_passwrd{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 12px;    
-}
-
-h6{
-    display: flex;
-    flex-direction: row;
-    width: 40.1%;
-    margin-top: 0px;
-    font-weight: 300;
-    font-size: 12px;
-}
-
-span a{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    color: #000;
-    text-decoration: underline;
-    font-weight: 700;
-    align-content: flex-end;
-    
-}
 
 h3{
     margin-bottom: 0;

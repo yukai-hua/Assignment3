@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css-file/login.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,25 +14,32 @@
   <body>
     <nav>
     
-      <div class="nav_content">
-        <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" class="check"> 
-        <ul>
-          <li><a href="recipe.html">ALL RECIPE</a></li>
-          <li><a href="subscription.html">SUBSCRIPTION</a></li>
-          <li class="Cart">
-            <a href="cart.html">
-              <img src="images/Icon.svg" alt="Cart"><span>0</span>
-             </a>
-          </li>
-          <li><a href="login.html"><img src="images/login.svg" alt="Login" class="Login"></a></li>
-        </ul>
-      </div>
-      
-    </nav>
+        <div class="nav_content">
+          <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
+          <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+          </label>
+          <input type="checkbox" name="check" id="check" class="check"> 
+          <ul>
+            <li><a href="recipe.html">ALL RECIPE</a></li>
+            <li><a href="subscription.html">SUBSCRIPTION</a></li>
+            <li class="Cart">
+              <a href="cart.html">
+                <img src="images/Icon.svg" alt="Cart"><span>0</span>
+                <div class="cart-text">CART</div>
+               </a>
+            </li>
+            <li>
+              <a href="login.html">
+               <img src="images/login.svg" alt="Login" class="Login">
+               <div class="log-text">LOGIN</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+  
 
     <section>
         <div class="login-container">

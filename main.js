@@ -106,6 +106,8 @@ function displayCart(){
   let productContainer=document.querySelector(".product-container");
   let summarySection=document.querySelector(".summary-section");
   let cartCost= localStorage.getItem('totalCost')
+  let orderSummary=document.querySelector(".order-summary-section");
+  let orderSummary1=document.querySelector(".order-summary-section1");
   let productNumbers = localStorage.getItem('cartNumbers')
   console.log(cartItems);
   if( cartItems && productContainer ){
@@ -160,12 +162,47 @@ function displayCart(){
           </div>
         </div>
         <div class="button-section">
-          <button class="checkout"></button>
+          <form action="delivery.html">
+            <button class="checkout"></button>
+          </form>
           <button class="add-to-plan"></button>
         </div>
       </div>      
-      `; 
+      `
     });
+    
+  }  
+
+  if (cartItems && orderSummary) {
+    Object.values(cartItems).map(item =>{
+      orderSummary.innerHTML=`
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <p class="subtotal">Recipe (${productNumbers})<span class="price">$ ${cartCost}</span></p>
+        <p class="delivery">Free Delivery<span class="price">$0</span></p></p>
+        <hr>
+        <p class="total">Total<span class="total_price">$${cartCost}</span></p>
+        <a href="payment.html" class="next-button"></a>
+      </div>
+      `
+    });
+
+  }
+
+  if (cartItems && orderSummary1) {
+    Object.values(cartItems).map(item =>{
+      orderSummary1.innerHTML=`
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <p class="subtotal">Recipe (${productNumbers})<span class="price">$ ${cartCost}</span></p>
+        <p class="delivery">Free Delivery<span class="price">$0</span></p></p>
+        <hr>
+        <p class="total">Total<span class="total_price">$${cartCost}</span></p>
+        <a href="confirmation.html" class="next-button"></a>
+      </div>
+      `
+    });
+
   }
   
 }

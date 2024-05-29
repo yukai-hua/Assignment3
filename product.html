@@ -3,40 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <title>Vite App</title>
-    <link rel="stylesheet"  href="product.css" />
+    <link rel="stylesheet"  href="css-file/product.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap" /> 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>	
 </head>
 <body>
-  <nav>
+    <nav>
     
-    <div class="nav_content">
-      <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
-      <input type="search" name="searchbox" id="searchbox" class="searchbox"> 
-      <label for="check" class="checkbox">
-        <i class="ri-menu-line"></i>
-      </label>
-      <input type="checkbox" name="check" id="check" class="check"> 
-      <ul>
-        <li><a href="recipe.html">ALL RECIPE</a></li>
-        <li><a href="subscription.html">SUBSCRIPTION</a></li>
-        <li class="Cart">
-          <a href="cart.html">
-            <img src="images/Icon.svg" alt="Cart"><span>0</span>
-           </a>
-        </li>
-        <li><a href="login.html"><img src="images/login.svg" alt="Login" class="Login"></a></li>
-      </ul>
-    </div>
-    
-  </nav>
+        <div class="nav_content">
+          <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
+          <label for="check" class="checkbox">
+            <i class="ri-menu-line"></i>
+          </label>
+          <input type="checkbox" name="check" id="check" class="check"> 
+          <ul>
+            <li><a href="recipe.html">ALL RECIPE</a></li>
+            <li><a href="subscription.html">SUBSCRIPTION</a></li>
+            <li class="Cart">
+              <a href="cart.html">
+                <img src="images/Icon.svg" alt="Cart"><span>0</span>
+                <div class="cart-text">CART</div>
+               </a>
+            </li>
+            <li>
+              <a href="login.html">
+               <img src="images/login.svg" alt="Login" class="Login">
+               <div class="log-text">LOGIN</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
 
   <section class="container">
     <div class="food-item">
       <div class="image-section">
-        <img class="items" src="prod_img_fc.svg" alt="Fish & Chips">
+        <img class="items" src="images/prod_img_fc.svg" alt="Fish & Chips">
       </div>
 
     </div>
@@ -46,7 +51,7 @@
         <h1>fish & chips</h1>
         <h2 class="price">$30</p>
       </div>
-      <img class="Line" src="Line.svg" alt="">
+      <img class="Line" src="images/Line.svg" alt="">
       
       
       <div class="sec-row">
@@ -58,15 +63,15 @@
             <option>3 persons (6 meals)</option>
             <option>4 persons (8 meals)</option>
           </select>
-          <img src="calories.svg" alt="">
+          <img src="images/calories.svg" alt="">
         </div>
       </div>
 
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+      <p class="description">Enjoy a classic British meal with crispy fish and fries, served with a side of mushy peas and sauce.</p>
       <div class="dropdowns">
-        <img class="Line1" src="Line.svg" alt="">
-        <button class="one"></button>
-        <button class="two"></button>
+        <img class="Line1" src="images/Line.svg" alt="">
+        <a href="ingredient.html" class="one"></a>
+        <a href="nutrition.html" class="two"></a>
       </div>
       <div class="buttons">
         <button type="button" class="add-to-cart" data-tag="fish_chips" data-name="Fish & Chips" data-price="30"></button>
@@ -77,22 +82,22 @@
 
   <div class="recommendations">
     <h2>You may like...</h2>
-    <a href="index.html">
+    <a href="product.html">
       <div class="recommendation-items">
         <div class="recommendation-item">
-          <img class="items" src="f&chips.svg" alt="Recommended Item">
+          <img class="items" src="images/f&chips.svg" alt="Recommended Item">
         </div>
     </a>   
 
-    <a href="#">
+    <a href="product-G&S.html">
       <div class="recommendation-item">
-        <img class="items" src="Green Salad.svg" alt="Recommended Item">
+        <img class="items" src="images/Green Salad.svg" alt="Recommended Item">
       </div>
     </a>
 
-    <a href="#">
+    <a href="product-B&K">
       <div class="recommendation-item">
-        <img class="items" src="Beef&K.svg" alt="Recommended Item">
+        <img class="items" src="images/Beef&K.svg" alt="Recommended Item">
       </div>
     </a>
 
