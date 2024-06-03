@@ -1,117 +1,147 @@
-
-let cart = document.querySelectorAll('.item');
-let planContainer = document.querySelector(".plan-container");
-let products = [
+let cart= document.querySelectorAll('.item')
+let planContainer=document.querySelector(".plan-container");
+let products=[
   {
     product: 'Fish & Chips',
-    tag: 'fish_chips',
-    price: 30,
-    inCart: 0
+    tag:'fish_chips',
+    price:30,
+    inCart:0
+
+
   },
+
   {
     product: 'Green Salad',
-    tag: 'green_salad',
-    price: 30,
-    inCart: 0
+    tag:'green_salad',
+    price:30,
+    inCart:0
+
+
   },
+
   {
     product: 'Beef Kabab',
-    tag: 'beef_kabab',
-    price: 30,
-    inCart: 0
+    tag:'beef_kabab',
+    price:30,
+    inCart:0
+
+
   },
+
 ];
 
-for (let i = 0; i < cart.length; i++) {
-  cart[i].addEventListener('click', () => {
+for ( let i=0; i< cart.length; i++){
+  cart[i].addEventListener('click',()=>{
     cartNumbers(products[i]);
+    console.log(i);
     totalcost(products[i]);
   })
 }
 
-function onLoadCartNumbers() {
+
+
+function onLoadCartNumbers(){
   let productNumbers = localStorage.getItem('cartNumbers');
-  if (productNumbers) {
-    document.querySelector('.Cart span').textContent = productNumbers;
+  if (productNumbers){
+    document.querySelector('.Cart span').textContent=productNumbers;
   }
 }
 
-function cartNumbers(product) {
-  let productNumbers = localStorage.getItem('cartNumbers');
-  productNumbers = parseInt(productNumbers);
-  if (productNumbers) {
-    localStorage.setItem('cartNumbers', productNumbers + 1);
-    document.querySelector('.Cart span').textContent = productNumbers + 1;
-  } else {
-    localStorage.setItem('cartNumbers', 1);
-    document.querySelector('.Cart span').textContent = 1;
+function cartNumbers(product){
+  let productNumbers = localStorage.getItem('cartNumbers')
+
+  productNumbers=parseInt(productNumbers);
+  if( productNumbers ){
+    localStorage.setItem('cartNumbers',productNumbers+1); 
+    document.querySelector('.Cart span').textContent=productNumbers+1;
+  }else{
+    localStorage.setItem('cartNumbers',1);
+    document.querySelector('.Cart span').textContent=1;
   }
   setItems(product);
 }
 
-function setItems(product) {
-  let cartItems = localStorage.getItem('productsInCart');
-  cartItems = JSON.parse(cartItems);
-  if (cartItems != null) {
-    if (cartItems[product.tag] == undefined) {
-      cartItems = {
+
+function setItems(product){
+  let cartItems= localStorage.getItem('productsInCart'); 
+  cartItems= JSON.parse(cartItems);
+
+  if(cartItems != null){
+    if(cartItems[product.tag] ==undefined){
+      cartItems ={
         ...cartItems,
-        [product.tag]: product
+        [product.tag]:product
       }
     }
     cartItems[product.tag].inCart += 1;
-  } else {
-    product.inCart = 1;
-    cartItems = {
-      [product.tag]: product
-    }
+  }else{
+    product.inCart =1;
+    cartItems= {
+      [product.tag]:product
+    }  
   }
+
+
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+//the item isnt passed as javascript object, but as JSON 
+           //object into local storage ,so we need to change it.
 }
 
-function totalcost(product) {
-  let cartCost = localStorage.getItem('totalCost');
-  if (cartCost != null) {
-    cartCost = parseInt(cartCost);
-    localStorage.setItem("totalCost", cartCost + product.price);
-  } else {
-    localStorage.setItem("totalCost", product.price);
-  }
+function totalcost(product){
+    //console.log("THe price is", product.price)
+    let cartCost= localStorage.getItem('totalCost')
+    
+    if(cartCost !=null){
+      cartCost= parseInt(cartCost)
+      localStorage.setItem("totalCost",cartCost+product.price);
+    }else{
+      localStorage.setItem("totalCost",product.price);
+    }
+
+
 }
 
-function displayCart() {
-  let cartItems = localStorage.getItem("productsInCart");
+function displayCart(){
+  let cartItems= localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
-  let productContainer = document.querySelector(".product-container");
-  let summarySection = document.querySelector(".summary-section");
-  let cartCost = localStorage.getItem('totalCost');
-  let orderSummary = document.querySelector(".order-summary-section");
-  let orderSummary1 = document.querySelector(".order-summary-section1");
+  
+  let productContainer=document.querySelector(".product-container");
+  let summarySection=document.querySelector(".summary-section");
+  let cartCost= localStorage.getItem('totalCost')
+  let orderSummary=document.querySelector(".order-summary-section");
+  let orderSummary1=document.querySelector(".order-summary-section1");
   let productNumbers = localStorage.getItem('cartNumbers');
-  if (cartItems && productContainer) {
-    productContainer.innerHTML = ` `;
-    Object.values(cartItems).map(item => {
-      productContainer.innerHTML += `
+  console.log(productContainer);
+  if( cartItems && productContainer ){
+     productContainer.innerHTML = ` `;
+     Object.values(cartItems).map(item =>{
+        productContainer.innerHTML += `
         <div class="product">
-          <div class="prod_detail">
-            <img src="images/${item.tag}.svg">
-            <div class="info">
-              <div class="name">${item.product}</div>
-              <small>Box size: 1 person (2 meals)</small>
+            <div class="prod_detail">
+              <img src="images/${item.tag}.svg">
+              <div class="info">
+                <div class="name">${item.product}</div>
+                <small>Box size: 1 person (2 meals)</small>
+              </div>  
+            </div> 
+
+            <div class="item">
+              <button type="button" class="minus" id="minus">
+              </button>
+              <span class="Quantity">${item.inCart}</span>
+              <button type="button" class="add" id="add">
+              </button>
             </div>
-          </div>
-          <div class="item">
-            <button type="button" class="minus" id="minus"></button>
-            <span class="Quantity">${item.inCart}</span>
-            <button type="button" class="add" id="add"></button>
-          </div>
-          <span class="the-price">${item.inCart * item.price}</span>
-        </div>
-      `
-    });
+            <span class="the-price">${item.inCart * item.price}</span>
+        </div>       
+        `
+       });
+
   }
-  if (cartItems && summarySection) {
-    summarySection.innerHTML = `
+  
+  if( cartItems && summarySection ){
+    Object.values(cartItems).map(item =>{
+      summarySection.innerHTML = `
       <div class="order-summary">
         <h2>Order Summary</h2>
         <p class="subtotal">Recipe (${productNumbers})<span class="price">$ ${cartCost}</span></p>
@@ -120,8 +150,8 @@ function displayCart() {
         <p class="total">Total<span class="total_price">$${cartCost}</span></p>
         <div class="date-time">
           <div onclick="showDatePicker()">
-            <img src="images/Calendar.svg" alt="Calendar">
-            <span class="selected-date" id="selected-date">choose date and time</span>
+              <img src="images/Calendar.svg" alt="Calendar">
+              <span class="selected-date" id="selected-date">choose date and time</span>
           </div>
           <div class="dropdown">
             <img src="images/clock.svg" alt="Clock">
@@ -130,7 +160,7 @@ function displayCart() {
               <option>10:00~12:00</option>
               <option>12:00~14:00</option>
               <option>14:00~16:00</option>
-            </select>
+            </select>    
           </div>
         </div>
         <div class="button-section">
@@ -138,55 +168,78 @@ function displayCart() {
             <button class="checkout"></button>
           </form>
         </div>
-      </div>
-    `;
-  }
+      </div>      
+      `
+    });
+    
+  }  
+
   if (cartItems && orderSummary) {
-    orderSummary.innerHTML = `
+    Object.values(cartItems).map(item =>{
+      orderSummary.innerHTML=`
       <div class="order-summary">
         <h2>Order Summary</h2>
         <p class="subtotal">Recipe (${productNumbers})<span class="price">$ ${cartCost}</span></p>
-        <p class="delivery">Free Delivery<span class="price">$0</span></p>
+        <p class="delivery">Free Delivery<span class="price">$0</span></p></p>
         <hr>
         <p class="total">Total<span class="total_price">$${cartCost}</span></p>
         <a href="payment.html" class="next-button"></a>
       </div>
-    `;
+      `
+    });
+
   }
+
   if (cartItems && orderSummary1) {
-    orderSummary1.innerHTML = `
+    Object.values(cartItems).map(item =>{
+      orderSummary1.innerHTML=`
       <div class="order-summary">
         <h2>Order Summary</h2>
         <p class="subtotal">Recipe (${productNumbers})<span class="price">$ ${cartCost}</span></p>
-        <p class="delivery">Free Delivery<span class="price">$0</span></p>
+        <p class="delivery">Free Delivery<span class="price">$0</span></p></p>
         <hr>
         <p class="total">Total<span class="total_price">$${cartCost}</span></p>
         <a href="confirmation.html" class="next-button"></a>
       </div>
-    `;
+      `
+    });
+
   }
+    
+
+  
 }
 
 onLoadCartNumbers();
 displayCart();
 
+
 function addToPlan(tag) {
   let cartItems = localStorage.getItem('productsInCart');
   cartItems = JSON.parse(cartItems);
+
+
   if (cartItems) {
     let product = cartItems[tag];
     let planItems = localStorage.getItem('productsInPlan');
     planItems = JSON.parse(planItems);
+   
+
     if (planItems == null) {
       planItems = {};
     }
+
+    
     if (product) {
       planItems[product.tag] = product;
       localStorage.setItem('productsInPlan', JSON.stringify(planItems));
+      console.log(planItems)
       if (planItems && planContainer) {
+        console.log(typeof planItems)
         planContainer.innerHTML = ``;
-        Object.values(planItems).map(item => {
-          
+        Object.values(planItems).forEach(item => {
+          console.log(planItems)
+          console.log(item.tag)
           planContainer.innerHTML += `
             <div class="product">
               <div class="prod_detail">
@@ -194,21 +247,25 @@ function addToPlan(tag) {
                 <div class="info">
                   <div class="name">${item.product}</div>
                   <small>Box size: 1 person (2 meals)</small>
-                </div>
+                </div>  
               </div>
-              <span class="the-price">$${item.price}
+              <span class="the-price">
+                $${item.price}
                 <button class="delete"></button>
               </span>
             </div>`;
+          console.log(planContainer)  
         });
       }
     }
   }
 }
 
+
 function increaseQuantity(tag) {
   let cartItems = localStorage.getItem('productsInCart');
   cartItems = JSON.parse(cartItems);
+
   if (cartItems[tag]) {
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
     cartNumbers(cartItems[tag]);
@@ -220,26 +277,41 @@ function increaseQuantity(tag) {
 function decreaseQuantity(tag) {
   let cartItems = localStorage.getItem('productsInCart');
   cartItems = JSON.parse(cartItems);
+
   if (cartItems[tag] && cartItems[tag].inCart > 0) {
     cartItems[tag].inCart -= 1;
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
     let productNumbers = localStorage.getItem('cartNumbers');
     localStorage.setItem('cartNumbers', productNumbers - 1);
-    document.querySelector('.Cart span').textContent = productNumbers - 1;
+    document.querySelector('.Cart span').textContent=productNumbers-1;
     let cartCost = localStorage.getItem('totalCost');
     localStorage.setItem('totalCost', cartCost - cartItems[tag].price);
     displayCart();
-  }
+    }else{
+      let productContainer=document.querySelector(".product-container");
+      Object.values(cartItems).map(item =>{
+      });
+  }  
 }
 
-document.addEventListener('click', function (event) {
+
+document.addEventListener('click', function(event) {
   if (event.target.classList.contains('add')) {
     let tag = event.target.closest('.product').querySelector('img').src.split('/').pop().split('.').shift();
+    console.log(tag);
+    console.log(typeof tag)
     increaseQuantity(tag);
   }
   if (event.target.classList.contains('minus')) {
     let tag = event.target.closest('.product').querySelector('img').src.split('/').pop().split('.').shift();
     decreaseQuantity(tag);
+  }
+  if (event.target.classList.contains('add-to-cart')) {
+    console.log("hhhh")
+    let tag = event.target.getAttribute('data-tag');
+    console.log(typeof tag);
+    console.log(tag);
+    increaseQuantity(tag);
   }
   if (event.target.classList.contains('add-to-plan')) {
     let tag= event.target.getAttribute('data-tag');
@@ -260,9 +332,10 @@ function loadPlanItems() {
             <div class="info">
               <div class="name">${item.product}</div>
               <small>Box size: 1 person (2 meals)</small>
-            </div>
+            </div>  
           </div>
-          <span class="the-price">$${item.price}
+          <span class="the-price">
+            $${item.price}
             <button class="delete"></button>
           </span>
         </div>`;
@@ -271,3 +344,4 @@ function loadPlanItems() {
 }
 
 loadPlanItems();
+

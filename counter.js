@@ -1,9 +1,15 @@
-export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
-  }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
-}
+const express= require('express')
+
+const app = express();
+
+app.get("/", (req,res)=>{
+  res.send("Welcome to my shop");
+})
+
+app.get("/about", (req,res)=>{
+  res.send("Welcome to about page");
+})
+
+app. listen(5000,()=>{
+  console.log("Server is running on port 5000");
+})

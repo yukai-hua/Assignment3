@@ -412,6 +412,7 @@ span.Quantity{
 
 .button-section{
   display: flex;
+  justify-content: center;
   height:63px;
   width: 100%;
   gap: 10%;

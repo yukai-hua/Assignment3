@@ -298,7 +298,7 @@ select{
   height: 100%;
 }
 
-.add-to-cart{
+.item{
   background-image: url(../images/Add\ to\ cart.svg);
   background-color: transparent;
   border: none;
