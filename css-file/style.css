@@ -142,7 +142,7 @@ ul li a:hover{
     }
       
       
-@media screen and (width<750px) {
+@media all and (width<750px) {
 nav .searchbox{
     display: block;
 }
