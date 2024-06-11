@@ -55,7 +55,7 @@ nav{
 
 
 .nav_content{
-    min-width: var(--max-width);
+    max-width: var(--max-width);
     margin: auto;
     padding: 1.rem 1rem;
     display: flex;
