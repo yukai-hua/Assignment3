@@ -119,7 +119,12 @@
     }
       
       
-  @media (width < 750px) {
+  @media screen and (max-width: 750px) {
+
+    body{
+      background-color: antiquewhite;
+    }
+    
     nav .searchbox{
       display: block;
   

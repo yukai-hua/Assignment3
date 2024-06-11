@@ -142,7 +142,7 @@ ul li a:hover{
     }
       
       
-@media all and (width<750px) {
+@media screen and (max-width:750px) {
 nav .searchbox{
     display: block;
 }
@@ -162,7 +162,7 @@ nav .searchbox{
 }
 
 nav{
-    min-width: var(--mobile-width);;
+    width: 100%;
 
     position: fixed;
     top: 0;
