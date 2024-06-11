@@ -119,77 +119,7 @@
     }
       
       
-  @media screen and (max-width: 750px) {
-
-    body{
-      background-color: antiquewhite;
-    }
-    
-    nav .searchbox{
-      display: block;
-  
-      
-    }
-  
-    .checkbox{
-      display: block;
-    }
-  
-    .nav_content>*{
-      margin-left: 0;
-    }
-  
-  
-  
-    ul{
-      position: absolute;
-      width: 178px;
-      height: 300% !important;
-      left: -110%;
-      top: 26.5vh;
-      flex-direction: column;
-      justify-content: center;
-      gap: 3rem;
-      margin:0%;
-      padding-left: 0%;
-      background-color: #000;
-    }
-  
-    ul li a{
-        color: #fff !important;
-    }
-  
-    ul li a:hover{
-      color: var(--primary-color) !important;
-    }
-  
-    nav #check:checked ~ ul{
-      left: 0;
-    }
-  
-    ul li img{
-      display: none;
-    }
-  
-    .cart-text,.log-text{
-      display: flex;
-      font-family: Kavoon;
-      color: #fff;
-    }
-  
-    .log-text:hover{
-      color: var(--primary-color);
-    }
-  
-    .cart-text:hover{
-      color: var(--primary-color);
-    }
-  
-    .Cart span{
-      display:none !important;
-    }
-  
-  }
+ 
 
 body {
     width: 100%;
@@ -225,3 +155,75 @@ body {
     max-height: 100%;
     }    
  
+@media screen and (max-width: 750px) {
+
+  body{
+    background-color: antiquewhite;
+  }
+  
+  nav .searchbox{
+    display: block;
+
+    
+  }
+
+  .checkbox{
+    display: block;
+  }
+
+  .nav_content>*{
+    margin-left: 0;
+  }
+
+
+
+  ul{
+    position: absolute;
+    width: 178px;
+    height: 300% !important;
+    left: -110%;
+    top: 26.5vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    margin:0%;
+    padding-left: 0%;
+    background-color: #000;
+  }
+
+  ul li a{
+      color: #fff !important;
+  }
+
+  ul li a:hover{
+    color: var(--primary-color) !important;
+  }
+
+  nav #check:checked ~ ul{
+    left: 0;
+  }
+
+  ul li img{
+    display: none;
+  }
+
+  .cart-text,.log-text{
+    display: flex;
+    font-family: Kavoon;
+    color: #fff;
+  }
+
+  .log-text:hover{
+    color: var(--primary-color);
+  }
+
+  .cart-text:hover{
+    color: var(--primary-color);
+  }
+
+  .Cart span{
+    display:none !important;
+  }
+
+}
+    
