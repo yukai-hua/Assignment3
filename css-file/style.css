@@ -283,7 +283,7 @@ footer{
     }
       
       
-@media (width < 750px) {
+@media screen and (width < 750px) {
 nav .searchbox{
     display: block;
 
@@ -298,12 +298,20 @@ nav .searchbox{
     margin-left: 0;
 }
 
-
+nav{
+    width: 100%;
+    height: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-image:url(../images/ivory-off-white-paper-texture.svg);
+}
 
 ul{
     position: absolute;
     width: 178px;
-    height: 300% !important;
+    height: 400% !important;
     left: -110%;
     top: 26.5vh;
     flex-direction: column;
