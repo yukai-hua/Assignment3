@@ -283,7 +283,7 @@ footer{
     }
       
       
-@media screen and (min-width: 460px) {
+@media screen and (max-width:460px) {
 nav .searchbox{
     display: block;
 
