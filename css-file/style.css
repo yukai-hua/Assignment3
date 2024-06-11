@@ -162,7 +162,7 @@ nav .searchbox{
 }
 
 nav{
-    max-width: var(--mobile-width);;
+    min-width: var(--mobile-width);;
 
     position: fixed;
     top: 0;
