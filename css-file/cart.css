@@ -337,11 +337,16 @@ span.price{
 
 @media screen and (width<420px) {
   section {
-
     overflow: scroll;
     overflow-y: hidden; 
+    right: 15px !important;
  }
+ @media screen and (width<399px) and (width>374px) {
+  section{
+    min-width: 356px !important;
 
+  }
+ }
 }
 
 }
