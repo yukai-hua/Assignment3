@@ -227,12 +227,91 @@ ul li img{
 
 .get-started-mobile{
     display: flex;
-    width: 90%;
+    width: 100%;
     min-width: 70px;
     position: absolute;
-    left: 150%;
-    bottom: 150px;
+    left: 320px;
+    bottom: 200px;
 
+}
+
+@media screen and (width<730px) {
+    .get-started-mobile{
+        width: 90% !important;
+        left: 300px !important;
+        bottom: 200px !important;
+    
+    }
+
+    @media screen and (width<680px) {
+        .get-started-mobile{
+            width: 80% !important;
+            left: 280px !important;
+            bottom: 200px !important;
+        
+        } 
+    }
+
+    @media screen and (width<624px) {
+        .get-started-mobile{
+            width: 70% !important;
+            left: 260px !important;
+            bottom: 200px !important;
+        
+        } 
+    }
+
+    @media screen and (width<574px) {
+        .get-started-mobile{
+            position: absolute !important;
+            right: 100px !important;
+            bottom: 200px !important;
+        
+        } 
+        @media screen and (width<550px) {
+            .get-started-mobile{
+                width: 100% !important;
+                left: 220px!important;
+                bottom: 170px !important;
+            
+            } 
+            @media screen and (width<460px) {
+                .get-started-mobile{
+
+                    width: 90px !important;
+                    left: 150px!important;
+                    bottom: 150px !important;
+                
+                } 
+                @media screen and (width<401px) {
+                    .get-started-mobile{
+    
+                        width: 90px !important;
+                        left: 130px!important;
+                        bottom: 150px !important;
+                    
+                    } 
+
+                    @media screen and (width<375px) {
+
+
+                        .get-started-mobile{
+                            position: sticky; 
+                            width: 90px !important;
+                            left: 130px!important;
+                            bottom: 150px !important;
+                        
+                        } 
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    }  
+    
 }
 
 .get-started{
@@ -459,6 +538,7 @@ section{
     display: flex;
     width: 100%;
     top: 27vh;
+    align-items: center;
 
 }
 
