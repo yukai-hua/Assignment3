@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Vite App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"  href="css-file/product.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap" /> 
@@ -42,6 +43,7 @@
     <div class="food-item">
       <div class="image-section">
         <img class="items" src="images/prod_img_fc.svg" alt="Fish & Chips">
+        <img class="items-mobile" alt="" src="images/prod_img_fc-mobile.svg">
       </div>
 
     </div>
@@ -63,19 +65,28 @@
             <option>3 persons (6 meals)</option>
             <option>4 persons (8 meals)</option>
           </select>
-          <img src="images/calories.svg" alt="">
+          <img class="calories" src="images/calories.svg" alt="">
+          <img class="calories-mobile" src="images/calories-mobile.svg" alt="">
         </div>
       </div>
 
       <p class="description">Enjoy a classic British meal with crispy fish and fries, served with a side of mushy peas and sauce.</p>
       <div class="dropdowns">
         <img class="Line1" src="images/Line.svg" alt="">
-        <a href="ingredient.html" class="one"></a>
-        <a href="nutrition.html" class="two"></a>
+        <a href="ingredient.html" class="one">
+          <img class="one-mobile" src="images/ingred_btn-mobile.svg" alt="">
+        </a>
+        <a href="nutrition.html" class="two">
+          <img class="two-mobile" src="images/nutrition_btn-mobile.svg" alt="">
+        </a>
       </div>
       <div class="buttons">
-        <button type="button" class="item" data-tag="fish_chips" data-name="Fish & Chips" data-price="30"></button>
-        <button type="button" class="add-to-plan" data-tag="fish_chips" data-name="Fish & Chips" data-price="30"></button>
+        <button type="button" class="item" data-tag="fish_chips" data-name="Fish & Chips" data-price="30">
+          <img class="btn" src="images/Add to cart-mobile.svg" alt="">
+        </button>
+        <button type="button" class="add-to-plan" data-tag="fish_chips" data-name="Fish & Chips" data-price="30">
+          <img class="btn" src="images/Add to plan-mobile.svg" alt="">
+        </button>
       </div>
     </div>
   </section>
@@ -86,18 +97,21 @@
       <div class="recommendation-items">
         <div class="recommendation-item">
           <img class="items" src="images/f&chips.svg" alt="Recommended Item">
+          <img src="images/f&c-recom-mob.svg" alt="" class="prod-mobile">
         </div>
     </a>   
 
     <a href="product-G&S.html">
       <div class="recommendation-item">
         <img class="items" src="images/Green Salad.svg" alt="Recommended Item">
+        <img src="images/g&s-recom-mob.svg" alt="" class="prod-mobile">
       </div>
     </a>
 
     <a href="product-B&K">
       <div class="recommendation-item">
         <img class="items" src="images/Beef&K.svg" alt="Recommended Item">
+        <img src="images/b&k-recom-mob.svg" alt="" class="prod-mobile">
       </div>
     </a>
 

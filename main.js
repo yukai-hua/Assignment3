@@ -105,7 +105,7 @@ function displayCart() {
             <span class="Quantity">${item.inCart}</span>
             <button type="button" class="add" id="add"></button>
           </div>
-          <span class="the-price">${item.inCart * item.price}</span>
+          <span class="the-price">$${item.inCart * item.price}</span>
         </div>
       `
     });
@@ -135,7 +135,9 @@ function displayCart() {
         </div>
         <div class="button-section">
           <form action="delivery.html">
-            <button class="checkout"></button>
+            <button class="checkout">
+             <img src="images/checkout-mobile.svg" class="checkout-mobile">
+            </button>
           </form>
         </div>
       </div>

@@ -114,7 +114,9 @@ ul li a{
 }
 
 
-
+img.items-mobile{
+  display: none;
+}
 
 
 
@@ -122,8 +124,34 @@ ul li a{
   display: none;
   }
     
+  
+img.btn,img.calories-mobile,img.one-mobile,img.two-mobile,img.prod-mobile{
+  display: none;
+}  
+
+
+@media screen and (max-width: 750px) {
+  nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-image:url(../images/ivory-off-white-paper-texture.jpg);
+  }
+  
+  .nav_content{
+    height: 100%;
+  }
+
+  nav .logo-icon {
+    width: 65px;
+    height: 55px;
+    padding: 40px;
     
-@media (width < 750px) {
+    background-color:var(--primary-color);
+  }
+
   nav .searchbox{
     display: block;
 
@@ -142,16 +170,50 @@ ul li a{
 
   ul{
     position: absolute;
-    width: 178px;
-    height: 300% !important;
+    width: 145px;
+    max-height: var(--max-width) !important;
+    min-height: 400%;
     left: -110%;
-    top: 26.5vh;
+    top: 140px;
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
     margin:0%;
     padding-left: 0%;
     background-color: #000;
+    background-position: bottom;
+    background-size: cover;
+  }
+  
+
+    
+  @media screen and (max-height:550px) {
+    ul{
+        min-height: 300%;
+        left: -110%;
+        top: 140px;
+      
+    }    
+  }
+
+  @media screen and (min-height:600px) {
+    ul{
+      min-height: 725px;
+    }
+    
+  }
+
+  @media screen and (max-height:750px){
+    ul{
+      min-height: 600px;
+    }
+  }
+  
+  @media screen and (min-height:900px) {
+    ul{
+      min-height: 800px;
+    }
+    
   }
 
   ul li a{
@@ -187,9 +249,95 @@ ul li a{
   .Cart span{
     display:none !important;
   }
+/******************************product********************/
 
+  section{
+    display: flex !important;
+    top: 20.5vh !important;
+    flex-direction: column !important;
+    right: 10px !important;
+  }
+
+  .image-section{
+    position: relative;
+    right: 0px;
+  }
+
+  img.items-mobile{
+    display: flex;
+    position: relative;
+    right: 10px !important;
+  }
+  img.items{
+    display: none;
+  }
+
+  .recommendations{
+    top: 200px !important;
+    left: 20px !important;
+    width: 89% !important;
+  }
+
+  .recommendation-items{
+    display: flex !important;
+    height: 127px;
+    gap: 10% !important;
+    overflow: scroll !important;
+  }
+
+  h1,h2,.recommendations h2{
+    font-size: 20px !important;
+  }
+
+  .sec-row h1{
+    font-size: 15px !important;
+    padding-bottom: 5px;
+  }
+
+  .item{
+    background-image: none !important;
+
+  }
+  
+  .add-to-plan{
+    background-image: none !important;
+
+  }
+  
+  img.btn{
+    display: flex;
+    width: 100%;
+  }
+
+  .details-section{
+    gap: 3% !important;
+  }
+
+  img.Line{
+    top: -40px !important;
+  }
+
+  img.calories{
+    display: none;
+  }
+
+  img.calories-mobile{
+    display: block !important;
+  }
+  img.one-mobile,img.two-mobile{
+    display: flex !important;
+    width: 100%;
+  }
+  .one,.two{
+    background-image: none !important;
+  }
+
+  img.prod-mobile{
+    display: block;
+  }
 }
 
+/**************navigation*******************/
 
 body {
   width: 100%;
@@ -229,6 +377,8 @@ nav{
   align-items: center;
   flex-direction: row;
 }
+
+/********************product****************************/
 
 section{
   position: relative;
@@ -329,6 +479,7 @@ select{
 
 .details-section{
   display: flex;
+  width: 100%;
   flex-direction: column;
   position: relative;
   top: -30px;

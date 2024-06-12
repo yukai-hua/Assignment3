@@ -110,70 +110,248 @@ ul li a:hover{
 }
 
 
-@media (width < 750px) {
-  nav .searchbox{
-      display: block;
+@media screen and (max-width: 750px) {
+nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-image:url(../images/ivory-off-white-paper-texture.jpg);
+}
+
+.nav_content{
+  height: 100%;
+}
+
+nav .logo-icon {
+  width: 65px;
+  height: 55px;
+  padding: 40px;
   
-      
-  }
+  background-color:var(--primary-color);
+}
 
-  .checkbox{
-    display: block;
-  }
+nav .searchbox{
+  display: block;
 
-  .nav_content>*{
-    margin-left: 0;
-  }
+  
+}
+
+.checkbox{
+  display: block;
+}
+
+.nav_content>*{
+  margin-left: 0;
+}
 
 
 
+ul{
+  position: absolute;
+  width: 145px;
+  max-height: var(--max-width) !important;
+  min-height: 400%;
+  left: -110%;
+  top: 140px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  margin:0%;
+  padding-left: 0%;
+  background-color: #000;
+  background-position: bottom;
+  background-size: cover;
+}
+
+
+  
+@media screen and (max-height:550px) {
   ul{
-      position: absolute;
-      width: 178px;
-      height: 300% !important;
+      min-height: 300%;
       left: -110%;
-      top: 26.5vh;
-      flex-direction: column;
-      justify-content: center;
-      gap: 3rem;
-      margin:0%;
-      padding-left: 0%;
-      background-color: #000;
-  }
+      top: 140px;
+    
+  }    
+}
 
-  ul li a{
-    color: #fff;
+@media screen and (min-height:600px) {
+  ul{
+    min-height: 725px;
   }
   
-  
-  
-  nav #check:checked ~ ul{
-    left: 0;
-  }
+}
 
-  ul li img{
-      display: none;
+@media screen and (max-height:750px){
+  ul{
+    min-height: 600px;
+  }
+}
+
+@media screen and (min-height:900px) {
+  ul{
+    min-height: 800px;
   }
   
-  .cart-text,.log-text{
-      display: flex;
-      font-family: Kavoon;
-      color: #fff;
-  }
-  
-  .log-text:hover{
-    color: var(--primary-color);
+}
+
+ul li a{
+    color: #fff !important;
+}
+
+ul li a:hover{
+  color: var(--primary-color) !important;
+}
+
+nav #check:checked ~ ul{
+  left: 0;
+}
+
+ul li img{
+  display: none;
+}
+
+.cart-text,.log-text{
+  display: flex;
+  font-family: Kavoon;
+  color: #fff;
+}
+
+.log-text:hover{
+  color: var(--primary-color);
 }
 
 .cart-text:hover{
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
-  .Cart span{
-      display:none;
-  }
-  
+.Cart span{
+  display:none !important;
 }
+
+
+section{
+  position: relative !important;
+  left: auto !important;
+  top: 27.5vh;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  padding-bottom: 160px !important;
+  max-width: 356px !important;
+  max-height: 632px!important;
+  background-image: url(../images/cartframe-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.product-container {
+  min-width: 100% !important;
+  row-gap: 20% !important;
+  height: 36.563% !important;
+  width: 100% !important;
+  background-image: none !important;
+  top: 15% !important;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.summary-section {
+  min-width: 100% !important;
+  height: 42.8797% !important;
+  width: 100% !important;
+  background-image: none !important;
+}
+
+.order-summary{
+  width:auto !important;
+  top: 10% !important;
+}
+
+.date-time{
+  left: 0px !important;
+  padding-top: 10px ;
+}
+
+h2,hr {
+  display: none !important;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.name {
+  font-size: 14px !important;
+}
+
+small{
+  font-size: 11px;
+}
+
+.item{
+  top: 20px;
+  left: auto !important;
+}
+
+
+.product {
+  row-gap: 5% !important;
+  width: 92.078% !important;
+  height: 30.42% !important;
+  flex-wrap: nowrap !important;
+  top: auto !important;
+}
+
+
+.subtotal, .delivery {
+  border-bottom: 2px solid black !important;
+  padding-bottom: 2px !important;
+  font-size: 16px !important;
+}
+
+span.price{
+  font-size: 16px !important;
+}
+
+
+.total {
+  font-weight: 700;
+  font-size: 32px !important;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.checkout {
+  background-image: none !important ;
+}
+
+.checkout-mobile{
+  display: flex !important;
+  min-width: 122px !important;
+  min-height: 33px !important;
+}
+
+@media screen and (width<420px) {
+  section {
+
+    overflow: scroll;
+    overflow-y: hidden; 
+ }
+
+}
+
+}
+
+
+.checkout-mobile{
+ display: none;
+}
+
+
 
 body {
   width: 100%;
@@ -183,6 +361,7 @@ body {
   background-size:cover;
   background-position: center;
   background-attachment: fixed;
+  
 }
 
 
@@ -192,7 +371,7 @@ body {
 
 section{
   position: relative;
-  left: 15vw;
+  left: 10%;
   height: 1150px;
   display: flex;
   justify-content: flex-start;
