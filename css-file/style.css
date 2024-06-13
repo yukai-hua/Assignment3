@@ -129,6 +129,7 @@
 }
 
 .grid-plan{
+    position: relative;
     width: 100%;
 
 }
@@ -156,163 +157,170 @@
 }
   
 
+.shadow{
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0,0,0,0.1) inset;
+}
 
-
+.shadow:before,
+.shadow:after
+{ 
+   content:'';
+   position: absolute;
+   z-index: -1;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
       
       
 @media screen and (max-width:750px) {
-nav .searchbox{
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-image:url(../images/ivory-off-white-paper-texture.jpg);
+    }
+    
+    .nav_content{
+    height: 100%;
+    }
+
+    nav .logo-icon {
+    width: 65px;
+    height: 55px;
+    padding: 40px;
+    
+    background-color:var(--primary-color);
+    }
+
+    nav .searchbox{
     display: block;
 
     
     }
 
-.checkbox{
+    .checkbox{
     display: block;
-}
+    }
 
-.nav_content>*{
+    .nav_content>*{
     margin-left: 0;
-}
+    }
 
 
 
-ul{
+    ul{
     position: absolute;
-    width: 178px;
-    height: 300% !important;
+    width: 145px;
+    max-height: var(--max-width) !important;
+    min-height: 400%;
     left: -110%;
-    top: 26.5vh;
+    top: 140px;
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
     margin:0%;
     padding-left: 0%;
     background-color: #000;
-}
+    background-position: bottom;
+    background-size: cover;
+    }
+    
 
-ul li a{
-    color: #fff !important;
-}
+    
+    @media screen and (max-height:550px) {
+    ul{
+        min-height: 300%;
+        left: -110%;
+        top: 140px;
+        
+    }    
+    }
 
-ul li a:hover{
+    @media screen and (min-height:600px) {
+    ul{
+        min-height: 725px;
+    }
+    
+    }
+
+    @media screen and (max-height:750px){
+    ul{
+        min-height: 600px;
+    }
+    }
+    
+    @media screen and (min-height:900px) {
+    ul{
+        min-height: 800px;
+    }
+    
+    }
+
+    ul li a{
+        color: #fff !important;
+    }
+
+    ul li a:hover{
     color: var(--primary-color) !important;
-}
+    }
 
-nav #check:checked ~ ul{
+    nav #check:checked ~ ul{
     left: 0;
-}
+    }
 
-ul li img{
+    ul li img{
     display: none;
-}
+    }
 
-.cart-text,.log-text{
+    .cart-text,.log-text{
     display: flex;
     font-family: Kavoon;
     color: #fff;
-}
+    }
 
-.log-text:hover{
+    .log-text:hover{
     color: var(--primary-color);
-}
+    }
 
-.cart-text:hover{
+    .cart-text:hover{
     color: var(--primary-color);
-}
+    }
 
-.Cart span{
+    .Cart span{
     display:none !important;
-}
+    }
+
 
 .get-started-mobile{
     display: flex;
-    width: 100%;
+    width: 120%;
     min-width: 70px;
     position: absolute;
-    left: 320px;
-    bottom: 200px;
-
+    left: 54vw;
+    bottom: 6vh;
 }
 
-@media screen and (width<730px) {
-    .get-started-mobile{
-        width: 90% !important;
-        left: 300px !important;
-        bottom: 200px !important;
-    
+
+@media screen and (width<375px) {
+    section {
+      overflow: scroll !important;;
     }
 
-    @media screen and (width<680px) {
-        .get-started-mobile{
-            width: 80% !important;
-            left: 280px !important;
-            bottom: 200px !important;
-        
-        } 
+    .sectionContainer {
+       min-width: 375px !important;
+
     }
 
-    @media screen and (width<624px) {
-        .get-started-mobile{
-            width: 70% !important;
-            left: 260px !important;
-            bottom: 200px !important;
-        
-        } 
+    .get-started-mobile {
+        position: absolute;
+        left: 240px;
+        bottom: 30px;
     }
-
-    @media screen and (width<574px) {
-        .get-started-mobile{
-            position: absolute !important;
-            right: 100px !important;
-            bottom: 200px !important;
-        
-        } 
-        @media screen and (width<550px) {
-            .get-started-mobile{
-                width: 100% !important;
-                left: 220px!important;
-                bottom: 170px !important;
-            
-            } 
-            @media screen and (width<460px) {
-                .get-started-mobile{
-
-                    width: 90px !important;
-                    left: 150px!important;
-                    bottom: 150px !important;
-                
-                } 
-                @media screen and (width<401px) {
-                    .get-started-mobile{
-    
-                        width: 90px !important;
-                        left: 130px!important;
-                        bottom: 150px !important;
-                    
-                    } 
-
-                    @media screen and (width<375px) {
-
-
-                        .get-started-mobile{
-                            position: sticky; 
-                            width: 90px !important;
-                            left: 130px!important;
-                            bottom: 150px !important;
-                        
-                        } 
-                        
-                    }
-                    
-                }
-                
-            }
-            
-        }
-    }  
     
 }
+
+
 
 .get-started{
     visibility: hidden;
@@ -366,6 +374,16 @@ p{
 .text-section{
    padding-left: 0px !important;
 }
+
+
+.bubble_button {
+    position: absolute !important;
+    display: flex;
+    top: auto !important;
+    left: auto !important;
+    border: none;
+}
+
 
 
 
@@ -505,6 +523,7 @@ body{
     align-items: center;
     margin-bottom: 20px;
     gap: 15%;
+    padding: 10%;
 
 }
 
@@ -551,10 +570,21 @@ footer{
 
 .sectionContainer{
     display: flex;
+    flex-direction: row;
     width: 100%;
     margin: auto;
     padding: 1.5rem;
     justify-content: space-between;
     align-items: center; 
+
 }
     
+
+
+@media screen and (min-width:1400px) {
+    .grid-plan {
+       position: relative;
+       left: 5%;
+       right: 15%;
+    }
+}
