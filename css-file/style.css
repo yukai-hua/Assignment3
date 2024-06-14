@@ -298,9 +298,12 @@ nav{
     min-width: 70px;
     position: absolute;
     left: 54vw;
-    bottom: 6vh;
+    
 }
 
+.sectionContainer {
+    flex-direction: row !important;
+}
 
 @media screen and (width<375px) {
     section {
@@ -379,8 +382,12 @@ p{
 .bubble_button {
     position: absolute !important;
     display: flex;
+    width: auto !important;
+    max-width: 100% !important;
     top: auto !important;
     left: auto !important;
+    bottom: auto !important;
+    right: 83% !important;
     border: none;
 }
 
@@ -431,12 +438,12 @@ body{
 }    
  
 .bubble_button{
-    position: relative;
+    position: absolute;
     display: flex;
-    max-width: 100%;
-    min-width: 10%;
-    top: 120px;
-    right: 83%;
+    width: 15%;
+    right: 75%;
+    top: 65%;
+    z-index: 10;
     border: none;
 }
 
@@ -448,6 +455,7 @@ body{
     background-color: #000; 
     height: 71px;
     padding-bottom: 10px;
+    margin-top: 200px;
 }
 
 
@@ -524,12 +532,12 @@ body{
     margin-bottom: 20px;
     gap: 15%;
     padding: 10%;
-
+    padding-top: 0%;
 }
 
 .text-section {
     flex: 1;
-    padding-left: 171px;
+
 }
 
 .text-section .item {
@@ -569,22 +577,16 @@ footer{
 }
 
 .sectionContainer{
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     margin: auto;
     padding: 1.5rem;
     justify-content: space-between;
-    align-items: center; 
-
+    align-items: center;
+    
+    
 }
     
 
-
-@media screen and (min-width:1400px) {
-    .grid-plan {
-       position: relative;
-       left: 5%;
-       right: 15%;
-    }
-}
