@@ -11,7 +11,8 @@
     rel="stylesheet"/>	
 </head>
 <body>
-    <nav>
+    <nav id="toast" class="toast" style="display: none;">Item's added successfully! you can check out on the subscription page</nav>
+    <nav class="shadow">
     
         <div class="nav_content">
           <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
@@ -37,7 +38,8 @@
           </ul>
         </div>
         
-      </nav>
+    </nav>
+
 
   <section class="container">
     <div class="food-item">
@@ -52,10 +54,7 @@
       <div class="name_price">
         <h1>fish & chips</h1>
         <h2 class="price">$30</p>
-      </div>
-      <img class="Line" src="images/Line.svg" alt="">
-      
-      
+      </div>   
       <div class="sec-row">
         <h1>Box size</h1>
         <div class="box-size">
@@ -72,7 +71,6 @@
 
       <p class="description">Enjoy a classic British meal with crispy fish and fries, served with a side of mushy peas and sauce.</p>
       <div class="dropdowns">
-        <img class="Line1" src="images/Line.svg" alt="">
         <a href="ingredient.html" class="one">
           <img class="one-mobile" src="images/ingred_btn-mobile.svg" alt="">
         </a>
@@ -82,9 +80,11 @@
       </div>
       <div class="buttons">
         <button type="button" class="item" data-tag="fish_chips" data-name="Fish & Chips" data-price="30">
+          <img class="btn-desktop" src="images/Add to cart.svg" alt="">
           <img class="btn" src="images/Add to cart-mobile.svg" alt="">
         </button>
         <button type="button" class="add-to-plan" data-tag="fish_chips" data-name="Fish & Chips" data-price="30">
+          <img class="btn-desktop" src="images/Add to plan.svg" alt="">
           <img class="btn" src="images/Add to plan-mobile.svg" alt="">
         </button>
       </div>
@@ -108,7 +108,7 @@
       </div>
     </a>
 
-    <a href="product-B&K">
+    <a href="product-B&K.html">
       <div class="recommendation-item">
         <img class="items" src="images/Beef&K.svg" alt="Recommended Item">
         <img src="images/b&k-recom-mob.svg" alt="" class="prod-mobile">

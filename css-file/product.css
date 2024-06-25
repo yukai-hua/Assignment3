@@ -129,6 +129,18 @@ img.btn,img.calories-mobile,img.one-mobile,img.two-mobile,img.prod-mobile{
   display: none;
 }  
 
+.shadow{
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0,0,0,0.1) inset;
+}
+
+.shadow:before,
+.shadow:after
+{ 
+ content:'';
+ position: absolute;
+ z-index: -1;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
 
 @media screen and (max-width: 750px) {
   nav{
@@ -253,7 +265,7 @@ img.btn,img.calories-mobile,img.one-mobile,img.two-mobile,img.prod-mobile{
 
   section{
     display: flex !important;
-    top: 20.5vh !important;
+    top: 155px !important;
     flex-direction: column !important;
     right: 10px !important;
   }
@@ -311,6 +323,7 @@ img.btn,img.calories-mobile,img.one-mobile,img.two-mobile,img.prod-mobile{
 
   .details-section{
     gap: 3% !important;
+    width: 100% !important;
   }
 
   img.Line{
@@ -330,10 +343,25 @@ img.btn,img.calories-mobile,img.one-mobile,img.two-mobile,img.prod-mobile{
   }
   .one,.two{
     background-image: none !important;
+    height: 56px;
+    border-bottom-left-radius:0px !important;
+    border-bottom-right-radius:0px !important;
+    box-shadow: none !important;
+    outline:none !important;
+    cursor:none !important;
+
   }
 
   img.prod-mobile{
     display: block;
+  }
+
+  .btn-desktop{
+    display: none;
+  }
+  
+  .name_price{
+    max-height: 24px !important;
   }
 }
 
@@ -347,6 +375,9 @@ body {
   background-size:cover;
   background-position: center;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav_content > *{
@@ -382,7 +413,6 @@ nav{
 
 section{
   position: relative;
-  left: 5%;
   height: 700px;
   top: 27vh;
   display: flex;
@@ -417,22 +447,13 @@ select{
   gap: 13%;
 }
 
-.sec-row, .dropdowns, .description, .buttons {
-  position: relative;
-  top: -60px; 
-}
-
-.dropdowns, .description, .buttons {
-  position: relative;
-  top: -80px; 
-}
-
 .dropdowns{
   display: flex;
   flex-direction: column;
   height: 109px;
   width: 96.9%;
   row-gap: 3%;
+  border-top:2px solid #000;
 }
 
 .buttons{
@@ -441,6 +462,7 @@ select{
   width: 79.1%;
   height: 54px;
   gap: 8.84%;
+  margin-top: 3%;
 }
 
 .buttons>*{
@@ -448,16 +470,21 @@ select{
   height: 100%;
 }
 
-.item{
-  background-image: url(../images/Add\ to\ cart.svg);
-  background-color: transparent;
-  border: none;
+.btn-desktop{
+   width:100%;
+   height: 100%;
 }
 
 .add-to-plan{
-  background-image: url(../images/Add\ to\ plan.svg);
   background-color: transparent;
   border: none;
+  background-repeat: no-repeat;
+}
+
+.item{
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
 }
 
 .dropdowns button{
@@ -465,25 +492,33 @@ select{
 }
 
 .one{
-  
-  height: 56px;
   background-image: url(../images/ingred_btn.svg);
-  background-color: transparent;
+  height: 56px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;  
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.425);  
+  outline: none;     
+  cursor: pointer; 
+  background-repeat: no-repeat;
 }
 
 .two{
   height: 56px;
   background-image: url(../images/nutrition_btn.svg);
-  background-color: transparent;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;  
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.338);  
+  outline: none;     
+  cursor: pointer; 
+  background-repeat: no-repeat;
 }
 
 .details-section{
   display: flex;
-  width: 100%;
+  width: 55%;
   flex-direction: column;
   position: relative;
   top: -30px;
-  gap: 25px;
 }
 
 .description{
@@ -496,7 +531,8 @@ select{
   gap:13.4% ;
   font-size: 200%;
   font-family: Karma ;
-  max-height: 90px; 
+  max-height: 57px; 
+  border-bottom:2px solid #000;
 }
 
 .name_price h1{
@@ -513,6 +549,7 @@ select{
   flex-direction: column;
   position: relative;
   top: -2%;
+  justify-content: center;
 }
 img.items{
   width: 100%;
@@ -531,8 +568,8 @@ img.Line1{
 
 .recommendations{
    position: relative;
-   top: 162px;
-   left: 69px;
+   top: 25vh;
+   width: 94%;
 }
 
 .recommendations h2{
@@ -546,3 +583,24 @@ img.Line1{
   gap: 10%;
 }
 
+.toast {
+  display: flex;
+  position: fixed;
+  top: 15.5vh;
+  background-color:var(--primary-color);
+  background-image: none;
+  color: rgb(255, 255, 255);
+  font-family: Kavoon;
+  padding: 16px;
+  border-radius: 5px;
+  border: 2px solid #020202;
+  z-index: 100;
+  justify-content: center;
+}
+
+@media screen and (width<1050px) {
+  .name_price{
+    font-size:122% ;
+    max-height: 36px;
+  }
+}

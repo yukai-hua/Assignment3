@@ -3,45 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <title>Vite App</title>
-    <link rel="stylesheet"  href="css-file/product.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"  href="css-file/product-G&S.css" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap" /> 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>	
 </head>
 <body>
-    <nav>
-    
-        <div class="nav_content">
-          <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
-          <label for="check" class="checkbox">
-            <i class="ri-menu-line"></i>
-          </label>
-          <input type="checkbox" name="check" id="check" class="check"> 
-          <ul>
-            <li><a href="recipe.html">ALL RECIPE</a></li>
-            <li><a href="subscription.html">SUBSCRIPTION</a></li>
-            <li class="Cart">
-              <a href="cart.html">
-                <img src="images/Icon.svg" alt="Cart"><span>0</span>
-                <div class="cart-text">CART</div>
-               </a>
-            </li>
-            <li>
-              <a href="login.html">
-               <img src="images/login.svg" alt="Login" class="Login">
-               <div class="log-text">LOGIN</div>
+  <nav id="toast" class="toast" style="display: none;">Item's added successfully! you can check out on the subscription page</nav>
+  <nav class="shadow">
+  
+      <div class="nav_content">
+        <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" class="check"> 
+        <ul>
+          <li><a href="recipe.html">ALL RECIPE</a></li>
+          <li><a href="subscription.html">SUBSCRIPTION</a></li>
+          <li class="Cart">
+            <a href="cart.html">
+              <img src="images/Icon.svg" alt="Cart"><span>0</span>
+              <div class="cart-text">CART</div>
               </a>
-            </li>
-          </ul>
-        </div>
-        
-      </nav>
+          </li>
+          <li>
+            <a href="login.html">
+              <img src="images/login.svg" alt="Login" class="Login">
+              <div class="log-text">LOGIN</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+  </nav>
 
   <section class="container">
     <div class="food-item">
       <div class="image-section">
         <img class="items" src="images/prod_img_gs.svg" alt="Fish & Chips">
+        <img class="items-mobile" src="images/green_salad-mob.svg" alt="Fish & Chips">
       </div>
 
     </div>
@@ -51,7 +54,6 @@
         <h1>Green Salad</h1>
         <h2 class="price">$30</p>
       </div>
-      <img class="Line" src="images/Line.svg" alt="">
       
       
       <div class="sec-row">
@@ -69,14 +71,24 @@
 
       <p class="description">A fresh mix of lettuce, spinach, kale, avocado, and nuts with a tangy vinaigrette.</p>
       <div class="dropdowns">
-        <img class="Line1" src="images/Line.svg" alt="">
-        <a href="ingredient-G&S.html" class="one"></a>
-        <a href="nutrition-G&S.html" class="two"></a>
+        <a href="ingredient-G&S.html" class="one">
+          <img class="one-mobile" src="images/ingred_btn-mobile.svg" alt="">
+        </a>
+        <a href="nutrition-G&S.html" class="two">
+          <img class="two-mobile" src="images/nutrition_btn-mobile.svg" alt="">
+        </a>
       </div>
       <div class="buttons">
+        <button type="button" class="item"></button>
         <button type="button" class="item" data-tag="green_salad" data-name="Green Salad" data-price="30">
+          <img class="btn" src="images/Add to cart-mobile.svg" alt="">
         </button>
-        <button type="button" class="add-to-plan" data-tag="green_salad" data-name="Green Salad" data-price="30"></button>
+        <button type="button" class="item"></button>
+        <button type="button" class="add-to-plan" data-tag="Fish&Chips"></button>
+        <button type="button" class="add-to-plan" data-tag="green_salad" data-name="Green Salad" data-price="30">
+          <img class="btn" src="images/Add to plan-mobile.svg" alt="">
+        </button>
+        <button type="button" class="add-to-plan" data-tag="Beef Kabab"></button>
       </div>
     </div>
   </section>
@@ -87,18 +99,21 @@
       <div class="recommendation-items">
         <div class="recommendation-item">
           <img class="items" src="images/f&chips.svg" alt="Recommended Item">
+          <img src="images/f&c-recom-mob.svg" alt="" class="prod-mobile">
         </div>
     </a>   
 
     <a href="product-G&S.html">
       <div class="recommendation-item">
         <img class="items" src="images/Green Salad.svg" alt="Recommended Item">
+        <img src="images/g&s-recom-mob.svg" alt="" class="prod-mobile">
       </div>
     </a>
 
     <a href="product-B&K.html">
       <div class="recommendation-item">
         <img class="items" src="images/Beef&K.svg" alt="Recommended Item">
+        <img src="images/b&k-recom-mob.svg" alt="" class="prod-mobile">
       </div>
     </a>
 

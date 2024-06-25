@@ -130,12 +130,13 @@ section{
   align-items: center;
   height: 100%;
   min-width: 390px;
+  top: 27vh; 
 }  
 
 .recipeContainer{
   position: relative;
   width: 100%;
-  top: 27vh; 
+
 
 
 }
@@ -154,7 +155,18 @@ section{
   display:none ;
 }
 
+.shadow{
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0,0,0,0.1) inset;
+}
 
+.shadow:before,
+.shadow:after
+{ 
+ content:'';
+ position: absolute;
+ z-index: -1;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
 
 
 @media screen and (max-width:750px) {
@@ -278,30 +290,40 @@ section{
     display:none !important;
   }
 
+  section{
+    border-radius: 40px !important;
+    border: 5px solid black !important;
+    background-image: url(../images/recipe-frame.png) !important; 
+    background-position: center !important;
+    background-attachment: scroll;
+    width: 90.512%;
+    height: 620px;
+    min-width: auto !important;
+
+  }
 
   .recipeContainer{
     display: flex;
     flex-direction: column;
-    width: 390px;
-    justify-self: center !important;
-    background-image: url(../images/recipe-frame.png) !important; 
-    background-size:cover !important;
-    background-repeat:no-repeat !important;
-    background-position: top !important;
-    background-attachment: scroll;
+    width: 100%;
     justify-content: center !important;
     align-items: center !important;
     min-height: 740px;
+    row-gap: 4.5%;
 
   }
 
   .custom_section{
-    display: grid;
+    display: flex;
     justify-self: flex-start;
     width: 100%;
+    min-height: auto !important;
+    height: 64px;
     background-image: none !important;
-    border: #000 !important;
-    
+    justify-content: unset !important;
+    align-items: unset !important;
+    position: absolute !important;
+    top: 110px !important;
   }
   .tag_section{ 
     width:100%;
@@ -313,33 +335,39 @@ section{
   .recipes_section{
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
     width: 307px !important;
     height: 50% !important;
     position: relative;
-    bottom: 180px;
   }
 
   .menu_card{
-    width: 307px !important;
+    width: 100% !important;
     height: 78px !important;
-    
+    padding-top: 18.5px;
+    padding-bottom: 18.5px;
+    border-bottom: 1px solid #000;
   }
 
   .fish_chips{
     width: 100% !important;
     height: 100% !important;
     background-image: url(../images/f&c-mobile.svg) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
   }
   .Green_salad{
     width: 100% !important;
     height: 100% !important;
     background-image: url(../images/g&s-mobile.svg)!important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
   }
   .Beef_Kabab{
     width: 100% !important;
     height: 100% !important;
     background-image: url(../images/b&k-mobile.svg)!important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
   }
 
   .serving{
@@ -353,11 +381,12 @@ section{
   justify-content: space-around;
   align-items: center;
   overflow: hidden !important;
+  width: 100% !important;
 }
 
 .tag_section{
-  position: relative;
-  bottom: 65px;
+  position: absolute;
+
 }
 
 .all-mobile,
@@ -389,8 +418,10 @@ section{
 }
 
 .sorted_section{
-  position: relative;
-  bottom: 105px;
+  position: absolute !important;
+  display: flex;
+  align-items: center;
+  margin-left: 11.5% !important;
 }
 
 
@@ -398,35 +429,28 @@ section{
 .item{
   position: relative !important;
   top: -30px !important;
-  left: 210px !important;
+  left: 75px !important;
+  margin-left: 45% !important;
+  margin-right: 45% !important;
 }
 
-@media screen and (max-width:400px) {
 
-  section{
-    display: flex;
-    position: relative;
-    width: 390px;
-    justify-self: flex-start;
-    height: 100%;
-    right: 9px;
 
-  }
-  
-  .recipeContainer{
-    display: flex !important;
-    flex-direction: column;
-    width: 390px;
-    justify-self: center !important;
-    background-image: url(../images/recipe-frame.png) !important; 
-    background-size:cover !important;
-    background-repeat:no-repeat !important;
-    background-position: top !important;
-    background-attachment: scroll;
-    justify-content: center !important;
-    align-items: center !important;
-    
-  }
+.tag_list button{
+  min-width: 64px !important;
+  height: 21px !important;
+  font-size: 15px !important;
+
+
+}
+
+
+.sorted_section select{
+  width: 64px !important;
+  left: auto !important;
+  height: 21px !important;
+  font-size: 15px !important;
+  max-width: auto !important;
   
 }
 
@@ -443,6 +467,9 @@ body {
   background-size:cover;
   background-position: center;
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
 }
 
 .Cart span{
@@ -481,6 +508,8 @@ ul li a{
   background-position: top;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
+
 }
 
 .recipes_section{
@@ -495,16 +524,17 @@ ul li a{
   width:100%;
   align-content: center;
   overflow: scroll;
+  overflow-y: hidden;
 
 }
 
 .tag_list{
-  width:100%;
+  width:105%;
   display: flex;
   padding-left: 11.71%;
   justify-content: space-between;
   align-items: center;
-  gap: 5.25rem;
+  gap: 4.25rem;
 
 
 }
@@ -512,8 +542,22 @@ ul li a{
 .sorted_section{
   position: relative;
   max-width: 1200px;
-  padding-top: 60px;
-  margin-left: 11.71%;
+  top: 34px;
+  margin-left: 2.5%;
+}
+
+.sorted_section select{
+  display: flex;
+  max-width: 156px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: Karma;
+  border-radius: 7px;
+  border: none;
+  justify-content: center;
 }
 
 .sectionContainer{
@@ -577,15 +621,23 @@ option{
 
 }
 
+button.tag{
+  background: none;
+  border: none;
+}
+
 .item{
   position: relative;
   width: 95px;
   height: 26px;
   background-image: url(../images/add-to-cart.svg);
+  background-repeat: no-repeat;
   top: -170px;
   left: 125px;
   background-position: center;
   transition: 0.3s;
+
+
 }
 
 .item:hover{
@@ -610,29 +662,36 @@ option{
   font-size: 20px;
 }
 
-
-
-
-.get-started-button {
-  height: 13.47%;
-  width: 45.84%;
-  top: 79.58%;
-  right: 65.14%;
-  bottom: 15.93%;
-  left: 19.58%;
-  font-size: 20px;
+.tag_list button{
+  display: flex;
+  min-width: 156px;
+  height: 40px;
+  background-color: #000;
   color: #fff;
-  font-family: Kavoon;
-  }
-.button-child {
-  height: 100%;
-  width: 100%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  left: 0%;
-  border-radius: 13.5px;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  }    
+  font-size: 32px;
+  font-weight: 600;
+  font-family: Karma;
+  border-radius: 7px;
+  border: none;
+  justify-content: center;
+}
+
+.tag_list button#Vegetarian {
+  font-size: 24px;
+}
+
+button.active{
+  display: flex;
+  min-width: 156px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: Karma;
+  justify-content: center;
+}
+
+.menu_card.hide{
+  display: none;
+}

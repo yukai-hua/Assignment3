@@ -1,0 +1,465 @@
+:root{
+    --primary-color:#d764d7;
+    --text-dark:#000;
+    --text-light:#8e7e7e;
+    --extra-light:#faf5ff;
+    --max-width:1200px;
+  }
+  
+  .nav_content > *{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .checkbox{
+    display: none;
+  }
+  
+  .checkbox i{
+    font-size: 2rem;
+    color: var(--text-dark);
+    cursor: pointer;
+  }
+  
+  .check{
+    display: none;
+    
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-image:url(../images/ivory-off-white-paper-texture.jpg);
+  }
+  
+  
+  .nav_content{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  nav .logo-icon {
+    top: 22px;
+    left: 45px;
+    width: 98px;
+    height: 107px;
+    padding: 40px;
+  
+    background-color:var(--primary-color);
+  }
+  
+  nav.logo-icon a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+  }
+  
+  nav.logo-icon a:hover{
+    color:var(--primary-color) ;
+  }
+  
+  .Cart span{
+    display: flex;
+    text-align: center;
+    position: relative;
+    bottom: 38px;
+    left: 20px;
+    background-image: url(../images/circle.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .Cart img{
+    position: relative;
+    top: 10px;
+  }
+  
+  .nav_content > input{
+    border-radius: 20%;
+  }
+  
+  ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    transition: left 0.3s;
+  
+  }
+  
+  ul li a{
+    color: #000;
+    font-family: Kavoon;
+    
+  }
+  
+  ul li a:hover{
+    border-top-color:var(--primary-color) ;
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  
+  
+  .cart-text,.log-text{
+    display: none;
+    }
+      
+      
+    .shadow{
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0,0,0,0.1) inset;
+    }
+    
+    .shadow:before,
+    .shadow:after
+    { 
+      content:'';
+      position: absolute;
+      z-index: -1;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+    
+      @media screen and (max-width: 750px) {
+      nav{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-image:url(../images/ivory-off-white-paper-texture.jpg);
+      }
+    
+      .nav_content{
+        height: 100%;
+      }
+    
+      nav .logo-icon {
+        width: 65px;
+        height: 55px;
+        padding: 40px;
+        
+        background-color:var(--primary-color);
+      }
+    
+      nav .searchbox{
+        display: block;
+    
+        
+      }
+    
+      .checkbox{
+        display: block;
+      }
+    
+      .nav_content>*{
+        margin-left: 0;
+      }
+    
+    
+    
+      ul{
+        position: absolute;
+        width: 145px;
+        max-height: var(--max-width) !important;
+        min-height: 400%;
+        left: -110%;
+        top: 140px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        margin:0%;
+        padding-left: 0%;
+        background-color: #000;
+        background-position: bottom;
+        background-size: cover;
+      }
+    
+    
+        
+      @media screen and (max-height:550px) {
+        ul{
+            min-height: 300%;
+            left: -110%;
+            top: 140px;
+          
+        }    
+      }
+    
+      @media screen and (min-height:600px) {
+        ul{
+          min-height: 725px;
+        }
+        
+      }
+    
+      @media screen and (max-height:750px){
+        ul{
+          min-height: 600px;
+        }
+      }
+    
+      @media screen and (min-height:900px) {
+        ul{
+          min-height: 800px;
+        }
+        
+      }
+    
+      ul li a{
+          color: #fff !important;
+      }
+    
+      ul li a:hover{
+        color: var(--primary-color) !important;
+      }
+    
+      nav #check:checked ~ ul{
+        left: 0;
+      }
+    
+      ul li img{
+        display: none;
+      }
+    
+      .cart-text,.log-text{
+        display: flex;
+        font-family: Kavoon;
+        color: #fff;
+      }
+    
+      .log-text:hover{
+        color: var(--primary-color);
+      }
+    
+      .cart-text:hover{
+        color: var(--primary-color);
+      }
+    
+      .Cart span{
+        display:none !important;
+      }
+
+
+.nutrition-card{
+  display: flex;
+  position: relative;
+  top: auto !important;
+  width: 100%;
+  border-radius: 40px !important;
+  border: 5px solid black !important;
+}
+
+img.frame{
+  display: none;
+}
+
+section{
+  top:27vh;
+  height: 468px;
+  width: 85% !important;
+}
+
+.info-section,.title{
+  bottom: auto !important;
+}
+
+.title h2{
+  font-size: 24px;
+}
+
+span.back-to-page{
+  background-image: url(../images/back-btn-mob.svg) !important;
+  height: 28.5px !important;
+  width: 28.13px !important;
+}
+
+h3{
+  font-size: 20px !important;
+  font-family: Karma !important;
+}
+
+img.pie-chart{
+  display: none ;
+}
+
+img.pie-chart-mob{
+  display: block !important;
+}
+
+img.pie-chart-mob:hover{
+  content: url(../images/pie-chart-gs-hover.svg);
+}
+
+.info{
+  margin-bottom: 30px;
+  bottom: auto !important;
+}
+
+.circle-chart{
+  left: auto !important;
+  bottom: auto !important;
+}
+
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image:url('../images/ivory-off-white-paper-texture.svg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+  position: relative;
+  background-image: url(../images/ivory-off-white-paper-texture.jpg);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.nutrition-card{
+  display: flex;
+  position: relative;
+  max-height: 622px;
+  top: 12vh; 
+  justify-content: center;
+  align-items: center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+.nutr-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+img.frame{
+  position: relative;
+  top: 450px;
+}
+
+
+.info-section{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  bottom: 220px;  
+  max-width: 346px;
+  
+}
+
+.title{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 200px;
+  width: 55%;
+}
+
+span.back-to-page{
+  display: flex;
+  background-image: url(../images/back-btn.svg);
+  width: 46.6px;
+  height: 48px;
+}
+
+span.back-to-page a{
+  display: flex;
+  width: 46.6px;
+}
+
+.circle-chart{
+  position: relative;
+  left: 25px;
+  bottom: 215px;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  max-width: 346px;
+  bottom: 270px;
+}
+
+.info-section{
+  display: flex;
+  position: relative;
+  max-height: 520px !important;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+h2{
+  font-family: Kavoon;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+h3{
+  font-family: Kavoon;
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+
+img.pie-chart:hover{
+  content: url(../images/pie\ chart-mid.svg);
+}
+
+
+img.pie-chart-mob{
+  display: none ;
+}
+
+img.pie-chart-mob:hover{
+  content: url(../images/pie\ chart-bk-mob-hover.svg);
+}
+
+
+.info>*+*{
+  display: flex;
+  font-family: Karma;
+}
+
+.unhealthy-indicator{
+  display: flex;
+  justify-content: space-between;
+  gap:13px;
+}
+
+.square{
+  background-color:  rgb(213, 182, 4);
+  display: flex;
+  width: 25px;
+  height: 23px;
+}

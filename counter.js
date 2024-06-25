@@ -1,13 +1,22 @@
-const express= require('express')
+const express= require('express');
+
+const path =require('path');
 
 const app = express();
 
-app.get("/", (req,res)=>{
-  res.send("Welcome to my shop");
-})
+const publicDirectory=path.join(__dirname, './public');
+app.use(express.static(publicDirectory));
 
-app.get("/about", (req,res)=>{
-  res.send("Welcome to about page");
+app.set('view engine','hbs');
+
+app.get("/", (req,res)=>{
+  res.render('home',{
+    name:'John' 
+  });
+}) 
+
+app.get("/contact", (req,res)=>{
+  res.send("Welcome to the contact page");
 })
 
 app. listen(5000,()=>{

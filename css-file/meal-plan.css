@@ -119,71 +119,148 @@
     }
       
       
-  @media (width < 750px) {
-    nav .searchbox{
-      display: block;
-  
+    .shadow{
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0,0,0,0.1) inset;
+    }
+    
+    .shadow:before,
+    .shadow:after
+    { 
+     content:'';
+     position: absolute;
+     z-index: -1;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+    
+    @media screen and (max-width: 750px) {
+      nav{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background-image:url(../images/ivory-off-white-paper-texture.jpg);
+      }
       
+      .nav_content{
+        height: 100%;
+      }
+    
+      nav .logo-icon {
+        width: 65px;
+        height: 55px;
+        padding: 40px;
+        
+        background-color:var(--primary-color);
+      }
+    
+      nav .searchbox{
+        display: block;
+    
+        
+      }
+    
+      .checkbox{
+        display: block;
+      }
+    
+      .nav_content>*{
+        margin-left: 0;
+      }
+    
+    
+    
+      ul{
+        position: absolute;
+        width: 145px;
+        max-height: var(--max-width) !important;
+        min-height: 400%;
+        left: -110%;
+        top: 140px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        margin:0%;
+        padding-left: 0%;
+        background-color: #000;
+        background-position: bottom;
+        background-size: cover;
+      }
+      
+    
+        
+      @media screen and (max-height:550px) {
+        ul{
+            min-height: 300%;
+            left: -110%;
+            top: 140px;
+          
+        }    
+      }
+    
+      @media screen and (min-height:600px) {
+        ul{
+          min-height: 725px;
+        }
+        
+      }
+    
+      @media screen and (max-height:750px){
+        ul{
+          min-height: 600px;
+        }
+      }
+      
+      @media screen and (min-height:900px) {
+        ul{
+          min-height: 800px;
+        }
+        
+      }
+    
+      ul li a{
+          color: #fff !important;
+      }
+    
+      ul li a:hover{
+        color: var(--primary-color) !important;
+      }
+    
+      nav #check:checked ~ ul{
+        left: 0;
+      }
+    
+      ul li img{
+        display: none;
+      }
+    
+      .cart-text,.log-text{
+        display: flex;
+        font-family: Kavoon;
+        color: #fff;
+      }
+    
+      .log-text:hover{
+        color: var(--primary-color);
+      }
+    
+      .cart-text:hover{
+        color: var(--primary-color);
+      }
+    
+      .Cart span{
+        display:none !important;
+      }
+  
+    .plan-container{
+      border-radius: 40px !important;
+      border: 5px solid black !important;
+      min-width: 90% !important;
+      background-image: url(../images/weekly-meal-plan-mob.svg) !important;
     }
-  
-    .checkbox{
-      display: block;
-    }
-  
-    .nav_content>*{
-      margin-left: 0;
-    }
-  
-  
-  
-    ul{
-      position: absolute;
-      width: 178px;
-      height: 300% !important;
-      left: -110%;
-      top: 26.5vh;
-      flex-direction: column;
-      justify-content: center;
-      gap: 3rem;
-      margin:0%;
-      padding-left: 0%;
-      background-color: #000;
-    }
-  
-    ul li a{
-        color: #fff !important;
-    }
-  
-    ul li a:hover{
-      color: var(--primary-color) !important;
-    }
-  
-    nav #check:checked ~ ul{
-      left: 0;
-    }
-  
-    ul li img{
-      display: none;
-    }
-  
-    .cart-text,.log-text{
-      display: flex;
-      font-family: Kavoon;
-      color: #fff;
-    }
-  
-    .log-text:hover{
-      color: var(--primary-color);
-    }
-  
-    .cart-text:hover{
-      color: var(--primary-color);
-    }
-  
-    .Cart span{
-      display:none !important;
-    }
-  
+    
+    
+
   }
 
 body {
@@ -194,6 +271,7 @@ body {
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
+    margin: 0px;
 }
 
 

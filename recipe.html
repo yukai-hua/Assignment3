@@ -11,75 +11,62 @@
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap" /> 	
     <title>Vite App</title>
   </head>
-    <nav>
-      
-      <div class="nav_content">
-        <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" class="check"> 
-        <ul>
-          <li><a href="recipe.html">ALL RECIPE</a></li>
-          <li><a href="subscription.html">SUBSCRIPTION</a></li>
-          <li class="Cart">
-            <a href="cart.html">
-              <img src="images/Icon.svg" alt="Cart"><span>0</span>
-              <div class="cart-text">CART</div>
-            </a>
-          </li>
-          <li>
-            <a href="login.html">
-            <img src="images/login.svg" alt="Login" class="Login">
-            <div class="log-text">LOGIN</div>
-            </a>
-          </li>
-        </ul>
-      </div>
-      
-    </nav>
+  
+  <nav class="shadow">
+    
+    <div class="nav_content">
+      <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" class="check"> 
+      <ul>
+        <li><a href="recipe.html">ALL RECIPE</a></li>
+        <li><a href="subscription.html">SUBSCRIPTION</a></li>
+        <li class="Cart">
+          <a href="cart.html">
+            <img src="images/Icon.svg" alt="Cart"><span>0</span>
+            <div class="cart-text">CART</div>
+           </a>
+        </li>
+        <li>
+          <a href="login.html">
+           <img src="images/login.svg" alt="Login" class="Login">
+           <div class="log-text">LOGIN</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+  </nav>
     
     <section class="recipe">
       <div class="recipeContainer">
           <div class="custom_section">
               <div class="tag_section">
                 <div class="tag_list">
-                 <div class="tag" id="tag_all">
-                   <img class="tag_all" src="images/tag_all.svg" alt="">
-                   <img src="images/All-mobile.svg" alt="" class="all-mobile">
-                 </div>
-                 <div class="tag" id="tag_quick">
-                   <img src="images/tag_quick.svg" alt="" class="tag_quick">
-                   <img src="images/quick-mobile.svg" alt="" class="quick-mobile">
-                 </div>
-                 <div class="tag" id="tag_fresh">
-                   <img src="images/tag_fresh.svg" alt="" class="tag_fresh">
-                   <img src="images/fresh-mobile.svg" alt="" class="fresh-mobile">
-                 </div> 
-                 <div class="tag">
-                   <img src="images/tag_meat.svg" alt="" class="tag_meat">
-                   <img src="images/meat-mobile.svg" alt="" class="meat-mobile">
-                 </div>
-                 <div class="tag">
-                   <img src="images/tag_vegetarian.svg" alt="" class="tag_vege">
-                   <img src="images/vegetarian-mobile.svg" alt="" class="vege-mobile">
-                 </div>
-                 <div class="tag">
-                  <img src="images/tag_popular.svg" alt="" class="tag_pop">
-                  <img src="images/popular-mobile.svg" alt="" class="pop-mobile">
-                 </div>
+                 <button class="active" data-name="All">All</button>
+                 <button data-name="Quick" id="Quick" data-type="Quick">Quick</button>
+                 <button data-name="Fresh" id="Fresh" data-type="Fresh">Fresh</button> 
+                 <button data-name="Meat" id="Meat" data-type="Meat">Meat</button>
+                 <button data-name="Vegetarian" id="Vegetarian" data-type="Vegetarian">Vegetarian</button>
+                 <button data-name="Popular" id="Popular" data-type="Popular">Popular</button>
                 </div>
               </div>
               
               <div class="sorted_section">
-                <img src="images/sort.svg" alt="" class="sort">
-                <img src="images/sort-mobile.svg" alt="" class="sort-mobile">
+                <select class="sort">
+                  <option>Sort</option>
+                  <option>calories:Low to High</option>
+                  <option>cooking time:Low to High</option>
+                </select>
+
              </div> 
               
           </div>
   
           <div class="recipes_section">
-            <div class="menu_card">
+            <div class="menu_card" data-name="Fresh" data-type="Quick" id="Meat">
               <div class="serving">
                 <select>
                   <option class="serv-option">1 person (2 meals)</option>
@@ -99,7 +86,7 @@
 
             </div>
 
-            <div class="menu_card">
+            <div class="menu_card" data-name="Vegetarian" data-type="Quick">
               <div class="serving">
                   <select>
                     <option>1 person (2 meals)</option>
@@ -117,7 +104,7 @@
 
             </div>
 
-            <div class="menu_card">
+            <div class="menu_card" data-name="Meat" id="Quick" data-type="Popular">
               <div class="serving">
                 <select>
                   <option>1 person (2 meals)</option>

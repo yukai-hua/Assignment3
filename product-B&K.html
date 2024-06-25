@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <title>Vite App</title>
-    <link rel="stylesheet"  href="css-file/product.css" />
+    <link rel="stylesheet"  href="css-file/product-B&K.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kavoon:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap" /> 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>	
 </head>
 <body>
-    <nav>
+    <nav id="toast" class="toast" style="display: none;">Item's added successfully! you can check out on the subscription page</nav>
+    <nav class="shadow">
     
         <div class="nav_content">
           <a href="index.html"><img class="logo-icon" alt="" src="images/logo.png"></a>
@@ -42,6 +44,7 @@
     <div class="food-item">
       <div class="image-section">
         <img class="items" src="images/prod_img_bk.svg" alt="Fish & Chips">
+        <img class="items-mobile" src="images/prod_img_bk-mob.svg" alt="Fish & Chips">
       </div>
 
     </div>
@@ -51,7 +54,6 @@
         <h1>Beef Kabab</h1>
         <h2 class="price">$30</p>
       </div>
-      <img class="Line" src="images/Line.svg" alt="">
       
       
       <div class="sec-row">
@@ -69,13 +71,25 @@
 
       <p class="description">Grilled beef kababs with onions and peppers, served with pita bread and tzatziki sauce.</p>
       <div class="dropdowns">
-        <img class="Line1" src="images/Line.svg" alt="">
-        <a href="ingredient-B&K.html" class="one"></a>
-        <a href="nutrition-B&K.html" class="two"></a>
+        <a href="ingredient-B&K.html" class="one">
+          <img class="one-mobile" src="images/ingred_btn-mobile.svg" alt="">
+        </a>
+        <a href="nutrition-B&K.html" class="two">
+          <img class="two-mobile" src="images/nutrition_btn-mobile.svg" alt="">
+        </a>
       </div>
       <div class="buttons">
-        <button type="button" class="item" data-tag="beef_kabab" data-name="Beef Kabab" data-price="30"></button>
-        <button type="button" class="add-to-plan"></button>
+        <button type="button" class="item"></button>
+        <button type="button" class="item"></button>
+        <button type="button" class="item" data-tag="beef_kabab" data-name="Beef Kabab" data-price="30">
+          <img class="btn" src="images/Add to cart-mobile.svg" alt="">
+        </button>
+        <button type="button" class="add-to-plan" data-tag="Fish&Chips"></button>
+        <button type="button" class="add-to-plan" data-tag="Green Salad"></button>
+        <button type="button" class="add-to-plan" data-tag="beef_kabab" data-name="Green Salad" data-price="30">
+          <img class="btn" src="images/Add to plan-mobile.svg" alt="">
+        </button>
+ 
       </div>
     </div>
   </section>
@@ -86,18 +100,21 @@
       <div class="recommendation-items">
         <div class="recommendation-item">
           <img class="items" src="images/f&chips.svg" alt="Recommended Item">
+          <img src="images/f&c-recom-mob.svg" alt="" class="prod-mobile">
         </div>
     </a>   
 
     <a href="product-G&S.html">
       <div class="recommendation-item">
         <img class="items" src="images/Green Salad.svg" alt="Recommended Item">
+        <img src="images/g&s-recom-mob.svg" alt="" class="prod-mobile">
       </div>
     </a>
 
-    <a href="product-B&K">
+    <a href="product-B&K.html">
       <div class="recommendation-item">
         <img class="items" src="images/Beef&K.svg" alt="Recommended Item">
+        <img src="images/b&k-recom-mob.svg" alt="" class="prod-mobile">
       </div>
     </a>
 
